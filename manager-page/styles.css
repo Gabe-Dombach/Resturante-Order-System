@@ -1,3 +1,13 @@
+*{
+    background-color:azure
+}
+
 .menu-box{
     display:flex
+}
+
+h1{
+    
+    margin-left: 50%;
+    margin-right:50%;
 }
