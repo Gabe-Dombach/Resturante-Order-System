@@ -35,7 +35,7 @@ color: white;
     margin-top: 50px;
 }
 a{
-    margin-top: 800px;
+    margin-top: 750px;
     display: block;
     width: 200px;
     height: 40px;
@@ -87,3 +87,11 @@ a{
       background-color: orange;
       border: 1px solid black;
   }
+  .options{
+      display: flex;
+      justify-content: center;
+      font-size: x-large;
+      margin-top: 25px;
+  }
+
+ 
