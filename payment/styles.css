@@ -4,6 +4,7 @@
 }
 /*Background Image*/
 .bg-image {
+
   background-image: url("eggs.jpeg");
   background-position: left;
   background-repeat: no-repeat;
@@ -38,6 +39,7 @@ article {
   background-color: rgb(53, 51, 49);
   height: 100%;
   margin-left: 500px;
+
         background-image:url("eggs.jpeg") ;
     background-position:left;
     background-repeat: no-repeat;
@@ -54,6 +56,7 @@ opacity: 1;
    background-color: rgb(53, 51, 49);
    height: 100%;
    margin-left: 500px;
+
   float: right;
   color: white;
 }
@@ -115,8 +118,7 @@ a:hover:after {
   background-color: orange;
   border: 1px solid black;
 }
-<<<<<<< HEAD
-=======
+
 /*Buttons on  bottom  */
 a{
     margin-top: 800px;
@@ -172,4 +174,4 @@ a{
       background-color: orange;
       border: 1px solid black;
   }
->>>>>>> 3ce2f96392a460b0a5624076f18067caf9c782ec
+
