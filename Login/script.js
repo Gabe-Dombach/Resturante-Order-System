@@ -14,7 +14,7 @@ $(document).ready(function(){
             let currentUser = JSON.parse(localStorage.getItem($('.emailLogin').val()));
             if($('.passwordLogin').val() ==  currentUser.password){
                 localStorage.setItem('currentUser',JSON.stringify(currentUser));
-                window.location.replace('../meue/menue.html')
+                window.location.replace('../menue/menue.html')
             }
             else{
                 window.alert('incorect password');
