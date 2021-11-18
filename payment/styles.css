@@ -13,7 +13,12 @@
     height: 100%;
     }
    
-/*Box on left side of screen*/
+
+/* Box on left side */
+.btn{
+    display: flex;
+    justify-content: center;
+}
 article{
 opacity: 1;
     border: 1px solid black;
@@ -29,7 +34,6 @@ color: white;
     justify-content: space-around;
     margin-top: 50px;
 }
-/*Buttons on  bottom  */
 a{
     margin-top: 800px;
     display: block;
@@ -71,7 +75,6 @@ a{
   a:hover:after{
     width: 100%;
   }
-  /*Remove button*/
   .remove{
       border-radius: 10px;
       padding: 5px;
