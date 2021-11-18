@@ -1,0 +1,53 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+#main
+{
+    display: flex;
+    width: 90%; 
+    background-color: grey;
+    margin-left:5%;
+    margin-right:5%;
+    justify-content: space-around;
+    height:fit-content;
+    margin-top:50px;
+    margin-bottom:125px;
+}
+#menu
+{
+    width:55%;
+    background-color: white;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+#order
+{
+    width:25%;
+    background-color: white;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    display:flex;
+}
+h1
+{
+    text-align:center;
+    margin-top: 50px;
+}
+#items td
+{
+    padding-left: 35px;
+}
+#food td
+{
+    padding:25px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+img
+{
+    width:100px;
+    height:100px;
+}
