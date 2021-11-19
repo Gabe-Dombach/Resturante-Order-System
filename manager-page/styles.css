@@ -2,12 +2,11 @@
     background-color:azure
 }
 
-.menu-box{
-    display:flex
+img{
+    max-width: 100px;
+    max-height: auto;
 }
 
-h1{
-    
-    margin-left: 50%;
-    margin-right:50%;
+.menu-box{
+    display: flex;
 }
