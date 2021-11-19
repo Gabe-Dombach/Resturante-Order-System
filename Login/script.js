@@ -13,9 +13,8 @@ $(document).ready(function () {
         window.location.replace("../manager-page/manager.html");
       } else window.alert("incorect password");
     } else {
-      let currentUser = JSON.parse(
-        localStorage.getItem($(".emailLogin").val())
-      );
+      let currentUser = JSON.parse(localStorage.getItem($(".emailLogin").val()));
+      localStorage.setItem('userEmail',JSON.stringify($('.emailLogin').val()));
       if ($(".passwordLogin").val() == currentUser.password) {
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
         window.location.replace("../menue/menue.html");
