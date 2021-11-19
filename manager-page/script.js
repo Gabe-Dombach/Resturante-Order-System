@@ -1,12 +1,3 @@
-function getBase64Image(img) {
-  var canvas = document.createElement("canvas");
-  canvas.width = img.width;
-  canvas.height = img.height;
-  var ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
-  var dataURL = canvas.toDataURL("image/png");
-  return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-}
 
 
 
@@ -16,7 +7,7 @@ $(document).ready(function () {
   image_input.addEventListener("change", function () {
     const reader = new FileReader();
     reader.addEventListener("load", () => {
-      uploaded_image = reader.result;
+      uploaded_image = reader.readAsDataURL(image_input);
     });
   });
   let arr1 = [];
@@ -24,7 +15,7 @@ $(document).ready(function () {
     arr1 = JSON.parse(localStorage.getItem("menue"));
   }
   $("#upload").on("click", function () {
-    uploaded_image = getBase64Image(uploaded_image);
+    
     const newItem = {
       image: uploaded_image,
       name: $(".nameNew").val(),
