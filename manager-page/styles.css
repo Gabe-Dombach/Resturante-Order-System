@@ -1,13 +1,24 @@
-*{
-    background-color:azure
+body{
+    background-image: linear-gradient(180deg, azure, white);
 }
 
-.menu-box{
-    display:flex
+img{
+    max-width: 100px;
+    max-height: auto;
 }
 
 h1{
-    
-    margin-left: 50%;
-    margin-right:50%;
+    text-align: center;
+}
+li{
+    margin-bottom: 50px;
+}
+
+.menu-box{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.menu-items{
+    background-color: rgb(153, 218, 207);
+    border-style: solid;
 }

@@ -1,6 +1,7 @@
 <hmtl>
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="bg-image">
@@ -10,16 +11,84 @@
           <h2>Price</h2>
           <h2>Delete</h2>
         </div>
-        <div class="btn">
-          <a onClick="thankyou" id="card" href="../recipt-page/reciept.html"
-            >Card</a
-          >
-          <a onClick="thankyou" id="cash" href="../recipt-page/reciept.html"
-            >Cash</a
-          >
+
+            <div class="btn">
+          <a href="#"id="card">Card</a>
+          <a href="#"id="cash">Cash</a>
           <a href="../menue/menue.html">Return</a>
-        </div>
-      </article>
+            </div>
+
+            <div class="choose">
+             <label for="delivery">Choose Pickup or Delivery:</label>
+                <button id="hideme"class="btn1">Pick Up</button>
+                <button  id="showme"class="btn1">Deliver</button>
+        <a id="purchase">Purchase</a>
+            </div> 
+
+        
+
+
+            <div class="address" >
+          <input class="box"type="text" placeholder="street">
+          <input class="box"type="text" placeholder="City">
+         <input class="box" type="text" placeholder="zip code"> 
+         <label for="location">State:</label>
+         <select name="dev" id="states">
+           <option values="plz1">Choose state</option>
+           <option>Alabama</option>
+           <option>Alaska</option> 
+           <option>Arizona</option>
+           <option>Arkansas</option> 
+           <option>California</option>
+           <option>Colorado</option> 
+           <option>Connecticut</option>
+           <option>Delaware</option> 
+           <option>Florida</option>
+           <option>Georgia</option> 
+           <option>Hawaii</option>
+           <option>Idaho</option> 
+           <option>Illinois</option>
+           <option>Indiana</option> 
+           <option>Iowa</option>
+           <option>Kansas</option> 
+           <option>Kentucky</option>
+           <option>Louisiana</option> 
+           <option>Maine</option>
+           <option>Maryland</option> 
+           <option>Massachusetts</option>
+           <option>Michigan</option> 
+           <option>Minnesota</option>
+           <option>Mississippi</option> 
+           <option>Missouri</option>
+           <option>Montana</option> 
+           <option>Nebraska</option>
+           <option>Nevada</option> 
+           <option>New Hampshire</option>
+           <option>New Jersey</option> 
+           <option>New Mexico</option>
+           <option>New York</option> 
+           <option>North Dakota</option>
+           <option>Ohio</option> 
+           <option>Oklahoma</option>
+           <option>Oregon</option> 
+           <option>Pennsylvania</option>
+           <option>Rhode Island</option> 
+           <option>South Carolina</option>
+           <option>South Dakota</option> 
+           <option>Tennessee</option>
+           <option>Texas</option> 
+           <option>Utah</option>
+           <option>Vermont</option> 
+           <option>Virginia</option>
+           <option>Washington</option> 
+           <option>West Virginia</option>
+           <option>Wisconsin</option> 
+           <option>Wyoming</option>
+           <option>Other</option> 
+           
+</div>
+
+        </article> 
     </div>
     <script src="script.js"></script>
   </body>
