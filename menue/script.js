@@ -1,3 +1,27 @@
+let list = []
+
+$(document).ready(function(){
+  list = JSON.parse(localStorage.getItem("menue"))
+  console.log(list)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function addItem(a) {
   var count = $(a).data("count") || 0;
   if (count < 1) {
