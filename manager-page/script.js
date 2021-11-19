@@ -15,7 +15,7 @@ $(document).ready(function () {
     const newItem = {
       image: uploaded_image,
       name: $(".nameNew").val(),
-      price: $("costNew").val(),
+      price: $(".costNew").val(),
     };
     arr1.push(JSON.stringify(newItem));
     localStorage.setItem("menue", JSON.stringify(arr1));

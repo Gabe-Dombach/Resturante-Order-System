@@ -1,7 +1,12 @@
 let list = []
 
 $(document).ready(function(){
+  console.log(localStorage.getItem("menue"))
   list = JSON.parse(localStorage.getItem("menue"))
+  for(let i = 0; i < list.length; i++)
+  {
+    list[i] = JSON.parse(list[i])
+  }
   console.log(list)
 });
 
@@ -27,7 +32,6 @@ function addItem(a) {
   if (count < 1) {
     let item = a.id;
     let value = "#" + item + 1;
-    console.log(value);
     let image = "#" + item + 0;
     let imageContent = $(image).html();
     let valueContent = $(value).html();
