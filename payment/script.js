@@ -8,7 +8,7 @@
     $(this).css('color','white');
     $(this).css('border','black');
     $(this).css('padding','10px');
-    $("#hideme").css('background-color','rgb(175, 170, 170)');
+    $("#hideme").css('background-color','white');
     $("#hideme").css('color','black');
     $("#hideme").css('border','white');
     $("#hideme").css('padding','5px');
@@ -20,7 +20,7 @@
     $(this).css('color','white');
     $(this).css('border','black');
     $(this).css('padding','10px');
-    $("#showme").css('background-color','rgb(175, 170, 170)');
+    $("#showme").css('background-color','white');
     $("#showme").css('color','black');
     $("#showme").css('border','white');
     $("#showme").css('padding','5px');
@@ -40,4 +40,6 @@
     })
    })
 
+
+    
    
