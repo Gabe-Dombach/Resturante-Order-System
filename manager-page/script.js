@@ -12,15 +12,11 @@ reader.addEventListener('load',()=>{
 
 })
   $("#upload").on("click", function () {
-    let uploadName = '.nameNew';
-    let costNew = 'costNew';
-    $('.menue').append('<li><img src='+uploaded_image+' alt='+$(uploadName).val()+'><p>$ '+$(costNew).val()+'</p>')
-    var ul = document.getElementsByClassName("menue");
-    var items = ul.getElementsByTagName("li");
-    for(let x=0; x< items.length; x ++){
-      arr1.push(items[x])
-    }    
-    
+    const newItem = {
+      image: uploaded_image,
+      name: $(".nameNew").val(),
+      price: $("costNew").val(),
+    };
     arr1.push(JSON.stringify(newItem));
     localStorage.setItem("menue", JSON.stringify(arr1));
   });
