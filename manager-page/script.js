@@ -1,20 +1,17 @@
-
-
-
+let uploaded_image = '';
 $(document).ready(function () {
-  const image_input = document.querySelector("#file");
-  var uploaded_image = "";
-  image_input.addEventListener("change", function () {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      uploaded_image = reader.readAsDataURL(image_input);
-    });
-  });
-  let arr1 = [];
-  if (localStorage.getItem("menue") != null) {
-    arr1 = JSON.parse(localStorage.getItem("menue"));
-  }
+document.querySelector('#file').addEventListener('change',function(){
+  console.log(this.files)
+  const reader = new FileReader();
+reader.addEventListener('load',()=>{
+   uploaded_image = reader.result
+  console.log(uploaded_image)
+})
+  reader.readAsDataURL(this.files[0]);
+
+})
   $("#upload").on("click", function () {
+  
     
     const newItem = {
       image: uploaded_image,
