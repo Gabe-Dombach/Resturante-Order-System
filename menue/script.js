@@ -7,6 +7,7 @@ $(document).ready(function(){
     list[i] = JSON.parse(list[i])
     console.log(list[i])
     let foodId = list[i].idName
+    foodId = foodId.join("")
     let food = list[i].name
     let imageData = list[i].image
     let price = list[i].price
@@ -93,5 +94,70 @@ function addItem(a) {
         item +
         "item>Remove one</tr>"
     );
+  }
+}
+function checkout()
+{
+  let arr1 = []
+  var table = document.getElementById("items");
+  for (let i = 0, row; row = table.rows[i]; i++) {
+    let itemName = ""
+    let total = ""
+    let quantity = ""
+    for (let j = 0, col; col = row.cells[j]; j++) {
+      if(j == 1)
+      {
+        let temp = col.innerHTML
+        temp = temp.split("")
+        for(let d = 0; d < 5; d++)
+        {
+          temp.shift()
+        }
+        for(let d = 0; d < 6; d++)
+        {
+          temp.pop()
+        }
+        itemName = temp.join("")
+          console.log(itemName)
+      }
+      else if(j == 2)
+      {
+        let temp = col.innerHTML
+        temp = temp.split("")
+        for(let d = 0; d < 5; d++)
+        {
+          temp.shift()
+        }
+        for(let d = 0; d < 6; d++)
+        {
+          temp.pop()
+        }
+        total = temp.join("")
+          console.log(total)
+      }
+      else if(j == 3)
+      {
+        let temp = col.innerHTML
+        temp = temp.split("")
+        for(let d = 0; d < 5; d++)
+        {
+          temp.shift()
+        }
+        for(let d = 0; d < 6; d++)
+        {
+          temp.pop()
+        }
+          quantity = temp.join("")
+          console.log(quantity)
+      }
+    }
+    const newItem = {
+      name: itemName,
+      cost: total,
+      amount: quantity
+    };
+    arr1.push(JSON.stringify(newItem));
+    localStorage.setItem("reciept", JSON.stringify(arr1));
+    console.log(localStorage.getItem("reciept"))  
   }
 }
