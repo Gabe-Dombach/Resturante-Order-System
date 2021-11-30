@@ -19,7 +19,7 @@ $(document).ready(function () {
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
         window.location.replace("../menue/menue.html");
       } else {
-        window.alert("incorect password");
+        window.alert("incorect password","Please enter only valid passwords");
       }
     }
   });
