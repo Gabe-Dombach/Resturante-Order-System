@@ -1,5 +1,10 @@
 body{
-    background-image: linear-gradient(180deg, azure, white);
+    background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
+}
+hr{
+    background-color: black;
+    width:30%;
+    margin-bottom: 30px
 }
 
 img{
@@ -10,7 +15,7 @@ img{
 h1{
     text-align: center;
 }
-li{
+dt{
     margin-bottom: 50px;
 }
 
