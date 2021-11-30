@@ -21,11 +21,11 @@
   margin-top: 10%;
 }
 #order {
-  width: 25%;
+  min-width: 25%;
+  width: fit-content;
   background-color: white;
   margin-bottom: 10%;
   margin-top: 10%;
-  display: flex;
 }
 h1 {
   text-align: center;
@@ -33,6 +33,12 @@ h1 {
 }
 #items td {
   padding-left: 35px;
+  padding-right: 35px;
+  padding: 25px;
+  height:100px
+}
+#items tr{
+  height:100px
 }
 #food td {
   padding: 25px;
@@ -42,4 +48,17 @@ h1 {
 img {
   width: 100px;
   height: 100px;
+}
+#items{
+  height: fit-content
+}
+#items td{
+  width:fit-content;
+}
+#checkout{
+  height:fit-content;
+  margin-left: 242px;
+  margin-right: 242px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

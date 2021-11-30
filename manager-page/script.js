@@ -24,7 +24,7 @@ $(document).ready(function () {
       image: uploaded_image,
       idName: removeSpaces($(".nameNew").val()),
       name: $(".nameNew").val(),
-      price: $("costNew").val(),
+      price: $(".costNew").val(),
     };
     arr1.push(JSON.stringify(newItem));
     localStorage.setItem("menue", JSON.stringify(arr1));
