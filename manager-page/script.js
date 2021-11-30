@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-let arr1 = []
-let uploaded_image = '';
-=======
 let uploaded_image = "";
 let arr1 = [];
 function removeSpaces(x) {
@@ -13,7 +9,6 @@ function removeSpaces(x) {
   }
   return x;
 }
->>>>>>> f44217a093191da457c36326cc530597588364a2
 $(document).ready(function () {
   document.querySelector("#file").addEventListener("change", function () {
     console.log(this.files);
