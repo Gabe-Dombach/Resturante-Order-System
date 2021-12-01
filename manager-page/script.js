@@ -10,6 +10,25 @@ function removeSpaces(x) {
   return x;
 }
 $(document).ready(function () {
+  if (localStorage.getItem("menue") != null) {
+    let addedITems = JSON.parse(localStorage.getItem("menue"));
+    let newAddedItems = [];
+    for (let x = 0; x < addedITems.length; x++) {
+      newAddedItems.push(JSON.parse(addedITems[x]));
+    }
+    for (let x = 0; x < newAddedItems.length; x++) {
+      const iter = newAddedItems[x];
+      $(".menue").append(
+        "<li><img src='" +
+          iter.image +
+          "'><p>" +
+          iter.name +
+          ": $" +
+          iter.price +
+          "</p>"
+      );
+    }
+  }
   document.querySelector("#file").addEventListener("change", function () {
     console.log(this.files);
     const reader = new FileReader();
@@ -28,20 +47,28 @@ $(document).ready(function () {
     };
     arr1.push(JSON.stringify(newItem));
     localStorage.setItem("menue", JSON.stringify(arr1));
+    $(".menue").append(
+      "<li><img src='" +
+        newItem.image +
+        "'><p>" +
+        newItem.name +
+        ": $" +
+        newItem.price +
+        "</p>"
+    );
   });
 
   $(".removeItem").click(function () {
     arr1 = JSON.parse(localStorage.getItem("menue"));
-    
+
     for (x = 0; x < arr1.length; x++) {
-      console.log('working')
+      console.log("working");
       let currentItem = JSON.parse(arr1[x]);
       if ($(".removeName").val() == currentItem.name) {
         arr1.splice(x, 1);
         console.log("removed");
-        
       }
     }
-    localStorage.setItem('menue',JSON.stringify(arr1))
+    localStorage.setItem("menue", JSON.stringify(arr1));
   });
 });
