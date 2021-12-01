@@ -1,29 +1,97 @@
-body{
-    background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
+body {
+  background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
 }
-hr{
-    background-color: black;
-    width:30%;
-    margin-bottom: 30px
-}
-
-img{
-    max-width: 100px;
-    max-height: auto;
+hr {
+  background-color: black;
+  width: 30%;
+  margin-bottom: 30px;
 }
 
-h1{
-    text-align: center;
-}
-dt{
-    margin-bottom: 50px;
+img {
+  max-width: 100px;
+  max-height: auto;
 }
 
-.menu-box{
-    margin-left: 20%;
-    margin-right: 20%;
+h1 {
+  text-align: center;
 }
-.menu-items{
-    background-color: rgb(153, 218, 207);
-    border-style: solid;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  list-style: none;
+}
+li {
+  margin: 5px;
+  width: 20%;
+  height: auto;
+}
+.addSys {
+  height: 30vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  border: 1px solid;
+  padding: 5px;
+  margin-top: 20px;
+}
+.addSys input {
+  height: 10%;
+  text-align: center;
+}
+.addSys button {
+  width: 20%;
+  height: auto;
+  align-self: center;
+  font-size: xx-large;
+}
+.fileUploader {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.fileUploader + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: black;
+  background-color: rgb(153, 218, 207);
+  display: inline-block;
+  width: auto;
+  padding: 5%;
+  text-align: center;
+  text-decoration: underline;
+}
+.fileUploader:focus + label,
+.fileUploader + label:hover {
+  color: white;
+  background-color: red;
+}
+.removeSys {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid;
+  padding: 5px;
+}
+.removeSys input {
+  height: 20%;
+}
+.removeSys button {
+  height: 20%;
+  width: 20%;
+  margin: auto;
+}
+.menu-box {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.menu-items {
+  background-color: rgb(153, 218, 207);
+  border-style: solid;
 }
