@@ -1,6 +1,7 @@
 let list = []
 
-$(document).ready(function(){
+$(document).ready(function()//adds items to the menu on page load
+{
   list = JSON.parse(localStorage.getItem("menue"))
   for(let i = 0; i < list.length; i++)
   {
@@ -29,7 +30,8 @@ $(document).ready(function(){
   }
 });
 
-function addItem(a) {
+function addItem(a) //adds items 
+ {
   let item = a.id;
   let value = "#" + item + 1;
   let image = "#" + item + 0;
@@ -110,7 +112,7 @@ function addItem(a) {
   }
 }
 
-function checkout()
+function checkout() //this is creates the json array and puts it into local storage
 {
   if($("#items").text() != undefined)
   {
@@ -176,7 +178,7 @@ function checkout()
   }
 }
 
-function removeItem(a)
+function removeItem(a)// removes items from the cart
 {
     let item = a.id;
     item = item.split("")
