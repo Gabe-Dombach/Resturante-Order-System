@@ -17,11 +17,11 @@ html, body{
   justify-content: space-around;
   height: fit-content;
   margin-top: 50px;
-  margin-bottom: 125px;
+  margin-bottom: 75px;
 }
 #menu {
   width: 55%;
-  margin-bottom: 10%;
+
   margin-top: 10%;
 }
 #order {
@@ -85,4 +85,11 @@ table, td
 table
 {
   margin:10px
+}
+#log-out
+{
+  margin-left:30%;
+  padding:10px;
+  font-size: xx-large;
+  margin-bottom: 75px;
 }
