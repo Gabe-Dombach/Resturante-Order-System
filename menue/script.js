@@ -5,7 +5,6 @@ $(document).ready(function(){
   for(let i = 0; i < list.length; i++)
   {
     list[i] = JSON.parse(list[i])
-    console.log(list[i])
     let foodId = list[i].idName
     foodId = foodId.join("")
     let food = list[i].name
@@ -31,13 +30,14 @@ $(document).ready(function(){
 });
 
 function addItem(a) {
+  let item = a.id;
+  let value = "#" + item + 1;
+  let image = "#" + item + 0;
+  let imageContent = $(image).html();
+  let valueContent = $(value).html();
+  let checker = $("#1" + item).html();
   var count = $(a).data("count") || 0;
   if (count < 1) {
-    let item = a.id;
-    let value = "#" + item + 1;
-    let image = "#" + item + 0;
-    let imageContent = $(image).html();
-    let valueContent = $(value).html();
     $(a).data("count", ++count);
     $("#items").append(
       "<tr id=1" +
@@ -50,34 +50,22 @@ function addItem(a) {
         valueContent +
         "</div></td><td><div>" +
         count +
-        "</div</td></tr>"
+        '</div></td><td><button onclick="removeItem(this)" id=but' +
+        item +
+        ">Remove</button></td></tr>"
     );
-  } else {
-    let item = a.id;
+  } 
+  else if(count > 1 && checker == undefined){
     $("#1" + item).remove();
-    let value = "#" + item + 1;
-    let image = "#" + item + 0;
-    let imageContent = $(image).html();
-    let valueContent = $(value).html();
-    console.log(valueContent)
+    $(a).data("count", 1);
+    let count = 1
     valueContent = valueContent.split("");
     valueContent.shift();
-    // for (let i = 0; i < 100; i++) {
-    //   let current = valueContent.length;
-    //   current = current - 1;
-    //   if (valueContent[current] == " ") {
-    //     valueContent.pop();
-    //   } else {
-    //     valueContent.pop();
-    //     break;
-    //   }
-    // }
-    $(a).data("count", ++count);
-    console.log(count)
     valueContent = valueContent.join("")
     valueContent = Number(valueContent);
     console.log(valueContent)
     valueContent = valueContent * count;
+    valueContent = valueContent.toFixed(2);
     valueContent = "$" + valueContent;
     $("#items").append(
       "<tr id=1" +
@@ -90,14 +78,43 @@ function addItem(a) {
         valueContent +
         "</div></td><td><div>" +
         count +
-        '</div</td><td><button onclick="removeItem(this)" id=' +
+        '</div></td><td><button onclick="removeItem(this)" id=but' +
         item +
-        "item>Remove one</tr>"
+        ">Remove</button></td></tr>"
+    );
+  } 
+  else {
+    $("#1" + item).remove();
+    valueContent = valueContent.split("");
+    valueContent.shift();
+    $(a).data("count", ++count);
+    valueContent = valueContent.join("")
+    valueContent = Number(valueContent);
+    valueContent = valueContent * count;
+    valueContent = valueContent.toFixed(2);
+    valueContent = "$" + valueContent;
+    $("#items").append(
+      "<tr id=1" +
+        item +
+        "><td>" +
+        imageContent +
+        "</td><td><div>" +
+        item +
+        "</div></td><td><div>" +
+        valueContent +
+        "</div></td><td><div>" +
+        count +
+        '</div></td><td><button onclick="removeItem(this)" id=but' +
+        item +
+        ">Remove</button></td></tr>"
     );
   }
 }
+
 function checkout()
 {
+  if($("#items").text() != undefined)
+  {
   let arr1 = []
   var table = document.getElementById("items");
   for (let i = 0, row; row = table.rows[i]; i++) {
@@ -160,4 +177,17 @@ function checkout()
     localStorage.setItem("reciept", JSON.stringify(arr1));
     console.log(localStorage.getItem("reciept"))  
   }
+  window.location.href = '../payment/payment.html'
+  }
+}
+
+function removeItem(a)
+{
+    let item = a.id;
+    item = item.split("")
+    item.shift()
+    item.shift()
+    item.shift()
+    item = item.join("")
+    $("#1" + item).remove();
 }
