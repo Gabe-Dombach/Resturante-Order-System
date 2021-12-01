@@ -63,7 +63,6 @@ function addItem(a) {
     valueContent.shift();
     valueContent = valueContent.join("")
     valueContent = Number(valueContent);
-    console.log(valueContent)
     valueContent = valueContent * count;
     valueContent = valueContent.toFixed(2);
     valueContent = "$" + valueContent;
@@ -135,7 +134,6 @@ function checkout()
           temp.pop()
         }
         itemName = temp.join("")
-          console.log(itemName)
       }
       else if(j == 2)
       {
@@ -150,7 +148,6 @@ function checkout()
           temp.pop()
         }
         total = temp.join("")
-          console.log(total)
       }
       else if(j == 3)
       {
@@ -165,7 +162,6 @@ function checkout()
           temp.pop()
         }
           quantity = temp.join("")
-          console.log(quantity)
       }
     }
     const newItem = {
@@ -175,7 +171,6 @@ function checkout()
     };
     arr1.push(JSON.stringify(newItem));
     localStorage.setItem("reciept", JSON.stringify(arr1));
-    console.log(localStorage.getItem("reciept"))  
   }
   window.location.href = '../payment/payment.html'
   }
