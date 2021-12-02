@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  let reciept = JSON.parse(localStorage.getItem("reciept"))
+  console.log (reciept)
+  
   $('send').click(function(){
       Email.send({
           Host : "smtp.elasticemail.com",
@@ -14,15 +17,16 @@ $(document).ready(function(){
   })
 })
 
-if (localStorage.getItem("reciept") != null) {
-let addedITems = JSON.parse(localStorage.getItem("reciept"));
-let newAddedItems = [];
-for (let x = 0; x < addedITems.length; x++) {
-  newAddedItems.push(JSON.parse(addedITems[x]));
-}}
+for (let i = 0; i < reciept.length; i++) {
+  let currObj = JSON.parse(reciept[i]);
+  //total = parseInt(currObj.cost)
+  let price = currObj.cost 
+  var finalPrice = price.replace(/\$/g,'')
+  var num = parseInt(finalPrice,10)
+  total = num + i
+  $("#items").append('<tr><td><p>Item:' + currObj.name + '<P></P>'+'Cost:' + currObj.cost + '</p></td></tr>')
+  console.log(total)
+}
 
-const newItem = {
-  name: itemName,total,quantity
-};
-arr1.push(JSON.stringify(newItem));
-localStorage.setItem("reciept", JSON.stringify(arr1));
+document.getElementById("total").innerHTML = "Total: $" + total
+localStorage.setItem("total", JSON.stringify(total));
