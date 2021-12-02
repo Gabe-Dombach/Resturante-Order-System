@@ -1,108 +1,108 @@
 <hmtl>
+
   <head>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="../menue/script.js"></script>
+    <script src="script.js"></script>
   </head>
+
   <body>
 
 
     <div class="bg-image">
       <article>
         <div class="tablehead">
-          <h2>Item</h2>
-          <h2>Quantity</h2>
-          <h2>Price</h2>
-          <h2>Delete</h2>
+          <h1 id="total">Total:$</h1>
         </div>
         <div class="content">
-        <table id=items>
-        </table>
-</div>
-<div class="Project">
-  <img src="https://media.giphy.com/media/XGNafjOYE7g88/giphy.gif" alt="help" class="imgMasked" />
-  <div class="Project-hail"></div>
-  <div class="Project-hail2"></div>
-</div>
+          <table id=items>
+         
+          </table>
+        </div>
+        <div class="Project">
+          <img src="https://media.giphy.com/media/XGNafjOYE7g88/giphy.gif" alt="help" class="imgMasked" />
+          <div class="Project-hail"></div>
+          <div class="Project-hail2"></div>
+        </div>
 
-            <div class="btn">
-          <a href="#"id="card">Card</a>
-          <a href="#"id="cash">Cash</a>
+        <div class="btn">
+          <a href="#" id="card">Card</a>
+          <a href="#" id="cash">Cash</a>
           <a href="../menue/menue.html">Return</a>
-            </div>
+        </div>
 
-            <div class="choose">
-                <button class="hvr-ripple-out" id="hideme">Pick Up</button>
-                <button  class="hvr-ripple-out" id="showme">Deliver</button>
-                
-        <a href="../recipt-page/reciept.html" id="purchase">Purchase</a>
-            </div> 
+        <div class="choose">
+          <button class="hvr-ripple-out" id="hideme">Pick Up</button>
+          <button class="hvr-ripple-out" id="showme">Deliver</button>
 
-        
-            <div class="address" >
-                <h2>Enter delivery address:</h2>
-          <input class="box"type="text" placeholder="street">
-          <input class="box"type="text" placeholder="City">
-         <input class="box" type="text" placeholder="zip code"> 
-         <label id="home"for="location">State:</label>
-         <select name="dev" id="states">
-           <option values="plz1">Choose state</option>
-           <option>Alabama</option>
-           <option>Alaska</option> 
-           <option>Arizona</option>
-           <option>Arkansas</option> 
-           <option>California</option>
-           <option>Colorado</option> 
-           <option>Connecticut</option>
-           <option>Delaware</option> 
-           <option>Florida</option>
-           <option>Georgia</option> 
-           <option>Hawaii</option>
-           <option>Idaho</option> 
-           <option>Illinois</option>
-           <option>Indiana</option> 
-           <option>Iowa</option>
-           <option>Kansas</option> 
-           <option>Kentucky</option>
-           <option>Louisiana</option> 
-           <option>Maine</option>
-           <option>Maryland</option> 
-           <option>Massachusetts</option>
-           <option>Michigan</option> 
-           <option>Minnesota</option>
-           <option>Mississippi</option> 
-           <option>Missouri</option>
-           <option>Montana</option> 
-           <option>Nebraska</option>
-           <option>Nevada</option> 
-           <option>New Hampshire</option>
-           <option>New Jersey</option> 
-           <option>New Mexico</option>
-           <option>New York</option> 
-           <option>North Dakota</option>
-           <option>Ohio</option> 
-           <option>Oklahoma</option>
-           <option>Oregon</option> 
-           <option>Pennsylvania</option>
-           <option>Rhode Island</option> 
-           <option>South Carolina</option>
-           <option>South Dakota</option> 
-           <option>Tennessee</option>
-           <option>Texas</option> 
-           <option>Utah</option>
-           <option>Vermont</option> 
-           <option>Virginia</option>
-           <option>Washington</option> 
-           <option>West Virginia</option>
-           <option>Wisconsin</option> 
-           <option>Wyoming</option>
-           <option>Other</option> 
-           
-</div>
+          <a href="../recipt-page/reciept.html" id="purchase">Purchase</a>
+        </div>
 
-        </article> 
+
+        <div class="address">
+          <h2>Enter delivery address:</h2>
+          <input class="box" type="text" placeholder="street">
+          <input class="box" type="text" placeholder="City">
+          <input class="box" type="text" placeholder="zip code">
+          <label id="home" for="location">State:</label>
+          <select name="dev" id="states">
+            <option values="plz1">Choose state</option>
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+            <option>California</option>
+            <option>Colorado</option>
+            <option>Connecticut</option>
+            <option>Delaware</option>
+            <option>Florida</option>
+            <option>Georgia</option>
+            <option>Hawaii</option>
+            <option>Idaho</option>
+            <option>Illinois</option>
+            <option>Indiana</option>
+            <option>Iowa</option>
+            <option>Kansas</option>
+            <option>Kentucky</option>
+            <option>Louisiana</option>
+            <option>Maine</option>
+            <option>Maryland</option>
+            <option>Massachusetts</option>
+            <option>Michigan</option>
+            <option>Minnesota</option>
+            <option>Mississippi</option>
+            <option>Missouri</option>
+            <option>Montana</option>
+            <option>Nebraska</option>
+            <option>Nevada</option>
+            <option>New Hampshire</option>
+            <option>New Jersey</option>
+            <option>New Mexico</option>
+            <option>New York</option>
+            <option>North Dakota</option>
+            <option>Ohio</option>
+            <option>Oklahoma</option>
+            <option>Oregon</option>
+            <option>Pennsylvania</option>
+            <option>Rhode Island</option>
+            <option>South Carolina</option>
+            <option>South Dakota</option>
+            <option>Tennessee</option>
+            <option>Texas</option>
+            <option>Utah</option>
+            <option>Vermont</option>
+            <option>Virginia</option>
+            <option>Washington</option>
+            <option>West Virginia</option>
+            <option>Wisconsin</option>
+            <option>Wyoming</option>
+            <option>Other</option>
+
+        </div>
+
+      </article>
     </div>
-    <script src="../menue/script.js"></script>
-    <script src="script.js"></script>
+
   </body>
 </hmtl>

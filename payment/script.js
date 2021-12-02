@@ -20,11 +20,11 @@ let total =
       var finalPrice = price.replace(/\$/g,'')
       var num = parseInt(finalPrice,10)
       total = num + i
-      $("#items").append('<td><p>Item:' + currObj.name + 'Cost:' + currObj.cost + '</p></td>')
+      $("#items").append('<tr><td><p>Item:' + currObj.name + '<P></P>'+'Cost:' + currObj.cost + '</p></td></tr>')
       console.log(total)
     }
    
-    document.getElementById("total").innerHTML = total
+    document.getElementById("total").innerHTML = "Total: $" + total
     localStorage.setItem("total", JSON.stringify(total));
     
 
