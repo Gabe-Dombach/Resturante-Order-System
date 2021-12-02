@@ -15,7 +15,7 @@ $(document).ready(function(){
             message => alert(message)
           ); 
   })
-})
+}) 
 
 for (let i = 0; i < reciept.length; i++) {
   let currObj = JSON.parse(reciept[i]);
