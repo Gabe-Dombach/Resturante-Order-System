@@ -1,0 +1,46 @@
+body{
+    background-color: aqua;
+    margin: 50px;
+    background-image:url("https://www.washingtonian.com/wp-content/uploads/2021/07/2Fiftys-1500x1000.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position-x: 50px;
+    background-position-y: 250px;
+}
+
+.contaner{
+    margin-top: 60px;
+}
+
+.bought{
+    width: 40%;
+    height: fit-content;
+    padding: 15px;
+    background-color: red;
+    margin-left: 730px;
+    
+}
+
+.itemsBox{
+    display: flex;
+    background-color: white;
+    width: 93%;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: center;
+    
+}
+
+h1{
+    border-bottom: 5px solid black;
+}
+
+.newTitle{
+    font-size: 60px;
+    border-bottom: 5px solid black;
+    justify-self: center;
+}
