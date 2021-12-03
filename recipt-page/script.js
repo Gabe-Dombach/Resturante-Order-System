@@ -9,15 +9,13 @@
       $("#items").append('<tr><td><p>Item:' + obj.name + '<P></P>'+'Cost:' + obj.cost + '</p></td></tr>')
    
     }
-   
-
-
-    $('#').click(function(){
+  
+    $('.send').click(function(){
         Email.send({
-            Host : "smtp.elasticemail.com",
+            Host : "smtp.gmail.com",
             Username : "gabrieldombach@gmail.com",
-            Password : "681A47444C7D4CAD2E161B2B9B6F455E7B35",
-            To : JSON.parse(localStorage.getItem('userEmail')),
+            Password : 'gabe1972_google',
+            To :'gdombach009@gmail.com', //JSON.parse(localStorage.getItem('userEmail')),
             From : "gabrieldombach@gmail.com",
             Subject : "Your Recipt",
             Body : $('.bought').html()
@@ -26,3 +24,8 @@
             );
     });
 });
+
+
+
+
+  
