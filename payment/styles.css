@@ -1,16 +1,16 @@
 * {
   padding: 0;
   margin: 0;
-   
+   overflow: hidden;
 }
 /*Background Image*/
 .bg-image {
         background-image:url("eggs.jpeg") ;
     background-position:left;
     background-repeat: no-repeat;
-    background-size:1100px;
+    background-size:1200px;
     position: relative;
-    height: 100%;
+    height: fit-content;
     }
    
 
@@ -24,23 +24,32 @@
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
-  border:1px solid white;
-  height: 500px;
+  height: 40px;
+}
+
+
+.content{
+    border: 1px solid white;
+    height: 550px;
+    overflow-y: auto;
 }
 
 article{
-opacity: 1;
+
     border: 1px solid black;
     width: 700px;
-   background-color: rgb(53, 51, 49);
-   height: 100%;
-   
+   background-color: black;
+   min-height: 100vh;
   float: right;
   color: white;
 }
 
 a{
-    margin-top: 20px;
+
+    margin-top: 10px;
+
+
+
     display: block;
     width: 200px;
     height: 40px;
@@ -49,7 +58,7 @@ a{
     font-family: sans-serif;
     text-decoration: none;
     color: rgb(5, 5, 5);
-    border: 3px solid white;
+   /* border: 3px solid white; */
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -93,9 +102,11 @@ a{
       border: 1px solid black;
   }
   .choose{
+      display: flex;
       font-size: x-large;
       margin-top: 25px;
-   
+    justify-content: space-around;
+    
      
   }
   .box{
@@ -104,22 +115,53 @@ a{
   }
 
   .address{
-     margin-top: 55px;
+     margin-top: 15px;
      padding: 5px;
    display: none;
-    
+
   }
   input{
       padding: 5px;
+      border: 1px solid black;
+      border-radius: 5px;
   }
-  .btn1{
-      padding: 5px;
-      border:1px solid white;
-      text-align: center;
-      border-radius: 10px;
-      background-color: rgb(175, 170, 170);
-  }
+#home{
+    font-size: x-large;
+}
+.fit{
+    border: 2px solid white;
+}
 
 
+.hvr-ripple-out {
+  text-align: center;
+  width: 105px;
+  background-color: white;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 2 5 2px white;
+  position: relative;
+}
 
+
+.f {
+ position: fixed;
+  top: 5px;
+  right: 10px;
  
+  color: #f0544f;
+}
+.f a {
+  color: #000;
+}
+
+
+
+#items{
+  color: white;
+  font-size: 50px;
+ 
+}
+ 
+
+
