@@ -46,7 +46,7 @@ button{
     padding-right: 15px;
     padding-left: 15px;
     justify-content: center;
-    
+    overflow-y: auto;
 }
 
 h1{

@@ -4,9 +4,9 @@ $(document).ready(function () {
   console.log(reciept)
 
   for (let i = 0; i < reciept.length; i++) {
-    let currObj = JSON.parse(reciept[i]);
+    let Obj = JSON.parse(reciept[i]);
 
-    $("#items").append('<tr><td><p>Item:' + currObj.name + '<P></P>'+'Cost:' + currObj.cost + '</p></td></tr>')
+    $("#items").append('<tr><td><p>Item:' + Obj.name + '<P></P>'+'Cost:' + Obj.cost + '</p></td></tr>')
     console.log(total)
   }
 
