@@ -1,9 +1,8 @@
 let total = 
-
   $(document).ready(function () {
 
     let reciept = JSON.parse(localStorage.getItem("reciept"))
-
+    console.log(reciept)
     /*for(let i = 0; i <= reciept.length; i++){
       if(){
  
