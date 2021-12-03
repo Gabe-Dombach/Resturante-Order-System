@@ -38,7 +38,7 @@ article{
 
     border: 1px solid black;
     width: 700px;
-   background-color: rgb(53, 51, 49);
+   background-color: black;
    min-height: 100vh;
   float: right;
   color: white;
@@ -54,7 +54,7 @@ a{
     font-family: sans-serif;
     text-decoration: none;
     color: rgb(5, 5, 5);
-    border: 3px solid white;
+   /* border: 3px solid white; */
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -128,51 +128,18 @@ a{
     border: 2px solid white;
 }
 
-/* Ripple Out */
-@-webkit-keyframes hvr-ripple-out {
-  100% {
-    top: -120px;
-    right: -120px;
-    bottom: -120px;
-    left: -120px;
-    opacity: 0;
-  }
-}
-@keyframes hvr-ripple-out {
-  100% {
-    top: -120px;
-    right: -120px;
-    bottom: -120px;
-    left: -120px;
-    opacity: 0;
-  }
-}
+
 .hvr-ripple-out {
   text-align: center;
   width: 105px;
-
   background-color: white;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0);
+  box-shadow: 2 5 2px white;
   position: relative;
 }
-.hvr-ripple-out:before {
-  content: '';
-  position: absolute;
-  border: #e1e1e1 solid 2px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
- 
-}
-.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
-  -webkit-animation-name: hvr-ripple-out;
-  animation-name: hvr-ripple-out;
-}
+
+
 .f {
  position: fixed;
   top: 5px;
