@@ -29,14 +29,13 @@
 
 
 .content{
-    border: 1px solid white;
+ 
     height: 550px;
     overflow-y: auto;
 }
 
 article{
-
-    border: 1px solid black;
+ 
     width: 700px;
    background-color: black;
    min-height: 100vh;
@@ -47,9 +46,6 @@ article{
 a{
 
     margin-top: 10px;
-
-
-
     display: block;
     width: 200px;
     height: 40px;
@@ -67,6 +63,7 @@ a{
     margin-right: 25px;
     padding:20px;
     color: white;
+
   }
   
   a span{
@@ -89,18 +86,8 @@ a{
   a:hover:after{
     width: 100%;
   }
-  .remove{
-      border-radius: 10px;
-      padding: 5px;
-      background-color: white;
-      color: orange;
-      border: 1px solid white;
-  }
-  .remove:hover{
-      color: black;
-      background-color: orange;
-      border: 1px solid black;
-  }
+ 
+ 
   .choose{
       display: flex;
       font-size: x-large;
@@ -137,9 +124,7 @@ a{
   text-align: center;
   width: 105px;
   background-color: white;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 2 5 2px white;
+
   position: relative;
 }
 
@@ -163,5 +148,4 @@ a{
  
 }
  
-
 

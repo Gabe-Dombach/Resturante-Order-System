@@ -1,5 +1,6 @@
 let total = 0
 let arr = []
+let link = 1
 $(document).ready(function () {
 
   let reciept = JSON.parse(localStorage.getItem("reciept"))
@@ -29,15 +30,14 @@ $(document).ready(function () {
   document.getElementById("total").innerHTML = "Total: $" + total
   localStorage.setItem("total", JSON.stringify(total));
 
-
-
-
-
+   
+    
 
   $("#showme").click(function () {
     $(".address").show()
     alert("Please enter your Address")
-    $(this).css('background-color', 'red');
+   
+    $(this).css('background-color', 'gray');
     $(this).css('color', 'white');
     $(this).css('border', 'black');
     $(this).css('padding', '10px');
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   $("#hideme").click(function () {
     $(".address").hide()
-    $(this).css('background-color', 'red');
+    $(this).css('background-color', 'gray');
     $(this).css('color', 'white');
     $(this).css('border', 'black');
     $(this).css('padding', '10px');
@@ -60,15 +60,19 @@ $(document).ready(function () {
   })
 
   $("#card").click(function () {
+
     $(this).css('background-color', 'rgba(255, 255, 255)');
     $(this).css('color', 'black');
-    $("#cash").css('background-color', 'rgb(53, 51, 49)')
+    $("#cash").css('background-color', 'black')
     $("#cash").css('color', 'white');
+  
   })
   $("#cash").click(function () {
+    alert("Pay at store")
     $(this).css('background-color', 'rgba(255, 255, 255)');
     $(this).css('color', 'black');
-    $("#card").css('background-color', 'rgb(53, 51, 49)')
+    $("#card").css('background-color', 'black')
     $("#card").css('color', 'white');
+
   })
 });
