@@ -33,6 +33,7 @@ button{
     padding: 15px;
     background-color: red;
     margin-left: 58%;
+    overflow-y: auto;
 
 }
 
@@ -40,12 +41,13 @@ button{
     display: flex;
     background-color: white;
     width: 93%;
-    height: fit-content;
+    height: 500px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 15px;
     padding-left: 15px;
     justify-content: center;
+    overflow-y: auto;
     
 }
 
