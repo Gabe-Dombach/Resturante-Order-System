@@ -11,7 +11,7 @@ function removeSpaces(x) {
 }
 $(document).ready(function () {
   if (localStorage.getItem("menue") != null) {
-    let addedITems = JSON.parse(localStorage.getItem("menue"));
+    let addedITems = JSON.parse(localStorage.getItem("menue"));//automaticly pull any added items from localStorage  and add them to the manager page
     let newAddedItems = [];
     for (let x = 0; x < addedITems.length; x++) {
       newAddedItems.push(JSON.parse(addedITems[x]));
@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
   }
   document.querySelector("#file").addEventListener("change", function () {
-    console.log(this.files);
+    console.log(this.files);//automaticly generate base64 data url when image file is uploaded
     const reader = new FileReader();
     reader.addEventListener("load", () => {
       uploaded_image = reader.result;
@@ -39,13 +39,13 @@ $(document).ready(function () {
     reader.readAsDataURL(this.files[0]);
   });
   $("#upload").on("click", function () {
-    const newItem = {
+    const newItem = {//create new object for new item
       image: uploaded_image,
       idName: removeSpaces($(".nameNew").val()),
       name: $(".nameNew").val(),
       price: $(".costNew").val(),
     };
-    arr1.push(JSON.stringify(newItem));
+    arr1.push(JSON.stringify(newItem));//add new item to array and store in local storage
     localStorage.setItem("menue", JSON.stringify(arr1));
     $(".menue").append(
       "<li><img src='" +
@@ -60,7 +60,7 @@ $(document).ready(function () {
 
   $(".removeItem").click(function () {
     arr1 = JSON.parse(localStorage.getItem("menue"));
-
+//remove item from local storage and the manager page
     for (x = 0; x < arr1.length; x++) {
       console.log("working");
       let currentItem = JSON.parse(arr1[x]);
