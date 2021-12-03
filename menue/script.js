@@ -10,7 +10,7 @@ $(document).ready(function()//adds items to the menu on page load
     foodId = foodId.join("")
     let food = list[i].name
     let imageData = list[i].image
-    let price = list[i].price
+    let price = list[i].price //lines 3-13 parse out the jsons array and then parse out items from the array
     $("#food").append(
       "<tr><td id=" +
         foodId + 
@@ -25,12 +25,12 @@ $(document).ready(function()//adds items to the menu on page load
         price +
         '</div></td><td><button onclick="addItem(this)" id=' +
         foodId +
-        ">Add</button></td></tr>"
+        ">Add</button></td></tr>" //lines 14-28 build the element for menu items and appends it to the menu table
     );
   }
 });
 
-function addItem(a) //adds items 
+function addItem(a) //adds items to the order
  {
   let item = a.id;
   let value = "#" + item + 1;
@@ -38,8 +38,8 @@ function addItem(a) //adds items
   let imageContent = $(image).html();
   let valueContent = $(value).html();
   let checker = $("#1" + item).html();
-  var count = $(a).data("count") || 0;
-  if (count < 1) {
+  var count = $(a).data("count") || 0; //lines 35-41 grab all the data fron the item you wish to add and formats them for the new element
+  if (count < 1) { //this if statement runs if the item is not on the order, as tracked by the "count" data attribute attached to each element
     $(a).data("count", ++count);
     $("#items").append(
       "<tr id=1" +
@@ -54,20 +54,12 @@ function addItem(a) //adds items
         count +
         '</div></td><td><button onclick="removeItem(this)" id=but' +
         item +
-        ">Remove</button></td></tr>"
+        ">Remove</button></td></tr>"//lines 45-57 construct the item in the order table
     );
   } 
-  else if(count > 1 && checker == undefined){
-    $("#1" + item).remove();
+  else if(count > 1 && checker == undefined){//this if statement runs if the item has been previously added to the order table, but has since been removed, it just resets the "count" attribute
     $(a).data("count", 1);
     let count = 1
-    valueContent = valueContent.split("");
-    valueContent.shift();
-    valueContent = valueContent.join("")
-    valueContent = Number(valueContent);
-    valueContent = valueContent * count;
-    valueContent = valueContent.toFixed(2);
-    valueContent = "$" + valueContent;
     $("#items").append(
       "<tr id=1" +
         item +
@@ -84,7 +76,7 @@ function addItem(a) //adds items
         ">Remove</button></td></tr>"
     );
   } 
-  else {
+  else { //if niether the previous two statements run, that means that this item is already in the order table, so this statement increase the quantity of the item and changes the item cost to reflect this
     $("#1" + item).remove();
     valueContent = valueContent.split("");
     valueContent.shift();
@@ -114,7 +106,7 @@ function addItem(a) //adds items
 
 function checkout() //this is creates the json array and puts it into local storage
 {
-  if($("#items").text() != undefined)
+  if($("#items").text() != undefined)//the if statement ensures that the function only operatesif there is something in the order to avoid potential errors and because you can't pay for nothing
   {
   let arr1 = []
   var table = document.getElementById("items");
@@ -178,7 +170,7 @@ function checkout() //this is creates the json array and puts it into local stor
   }
 }
 
-function removeItem(a)// removes items from the cart
+function removeItem(a)// removes the item attached to the button from the cart
 {
     let item = a.id;
     item = item.split("")
