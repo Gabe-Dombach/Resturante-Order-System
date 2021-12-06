@@ -22,7 +22,7 @@ $(document).ready(function () {
    
     //  total = num + i 
 
-    $("#items").append('<tr><td><p>Item:' + currObj.name +' '+ currObj.cost +  '</p></td></tr>')
+    $("#items").append('<tr><td><p>' + currObj.name +' '+ currObj.cost +  '</p></td></tr>')
   }
  for (let i = 0; i < arr.length; i++) {
       total += arr[i];
