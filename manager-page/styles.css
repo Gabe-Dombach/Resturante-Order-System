@@ -1,6 +1,5 @@
-*
-{
-  font-family: 'Open Sans', sans-serif;
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -13,8 +12,24 @@ hr {
 }
 
 img {
-  max-width: 100px;
-  max-height: auto;
+  background-color: inherit;
+  width: 15vh;
+  height: 15vh;
+  margin: auto;
+  opacity: 0.8;
+}
+
+li:hover {
+  background-image: url("img/cross.jpg");
+  background-position: center center;
+}
+li:hover img {
+  position: relative;
+  z-index: -2;
+}
+li:hover p {
+  position: relative;
+  z-index: -2;
 }
 
 h1 {
@@ -28,9 +43,13 @@ ul {
   list-style: none;
 }
 li {
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 2vh;
   width: 20%;
   height: auto;
+  align-content: center;
+  justify-content: center;
 }
 .addSys {
   height: 30vh;
@@ -75,7 +94,7 @@ li {
   color: white;
   background-color: red;
 }
-.removeSys {
+/* .removeSys {
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -91,7 +110,7 @@ li {
   height: 20%;
   width: 20%;
   margin: auto;
-}
+} */
 .menu-box {
   margin-left: 20%;
   margin-right: 20%;
