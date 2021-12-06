@@ -109,7 +109,7 @@ function checkout() //this is creates the json array and puts it into local stor
     let total = ""
     let quantity = ""
     for (let j = 0, col; col = row.cells[j]; j++) {
-      if(j == 1)
+      if(j == 0)
       {
         let temp = col.innerHTML
         temp = temp.split("")
@@ -123,7 +123,7 @@ function checkout() //this is creates the json array and puts it into local stor
         }
         itemName = temp.join("")
       }
-      else if(j == 2)
+      else if(j == 1)
       {
         let temp = col.innerHTML
         temp = temp.split("")
@@ -137,7 +137,7 @@ function checkout() //this is creates the json array and puts it into local stor
         }
         total = temp.join("")
       }
-      else if(j == 3)
+      else if(j == 2)
       {
         let temp = col.innerHTML
         temp = temp.split("")
