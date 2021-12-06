@@ -44,9 +44,7 @@ function addItem(a) //adds items to the order
     $("#items").append(
       "<tr id=1" +
         item +
-        "><td>" +
-        imageContent +
-        "</td><td><div>" +
+        "><td><div>" +
         item +
         "</div></td><td><div>" +
         valueContent +
@@ -63,9 +61,7 @@ function addItem(a) //adds items to the order
     $("#items").append(
       "<tr id=1" +
         item +
-        "><td>" +
-        imageContent +
-        "</td><td><div>" +
+        "><td><div>" +
         item +
         "</div></td><td><div>" +
         valueContent +
@@ -89,9 +85,7 @@ function addItem(a) //adds items to the order
     $("#items").append(
       "<tr id=1" +
         item +
-        "><td>" +
-        imageContent +
-        "</td><td><div>" +
+        "><td><div>" +
         item +
         "</div></td><td><div>" +
         valueContent +
