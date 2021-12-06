@@ -1,31 +1,95 @@
+function download(filename, text) {
+  var element = document.createElement("a");
+  element.setAttribute(
+    "href",
+    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+  );
+  element.setAttribute("download", filename);
 
-  $(document).ready(function () {
+  element.style.display = "none";
+  document.body.appendChild(element);
 
-    let reciept = JSON.parse(localStorage.getItem("reciept"))
-    console.log(reciept)
+  element.click();
 
-    for (let i = 0; i < reciept.length; i++) {
-      let obj = JSON.parse(reciept[i]);
-      $("#items").append('<tr><td><p>Item:' + obj.name + '<P></P>'+'Cost:' + obj.cost + '</p></td></tr>')
-   
+  document.body.removeChild(element);
+}
+
+$(document).ready(function () {
+  let reciept = JSON.parse(localStorage.getItem("reciept"));
+  console.log(reciept);
+  for (let i = 0; i < reciept.length; i++) {
+    let obj = JSON.parse(reciept[i]);
+    $("#items").append(
+      "<tr><td><p>Item:" +
+        obj.name +
+        "<P></P>" +
+        "Cost:" +
+        obj.cost +
+        "</p></td></tr>"
+    );
+  }
+  $("#send").click(function () {
+    // Start file download
+    let reciept = JSON.parse(localStorage.getItem("reciept"));
+
+    let text = "";
+    for (let a = 0; a < reciept.length; a++) {
+      let curOb = JSON.parse(reciept[a]);
+      text = text.concat(
+        "Name: " +
+          curOb.name +
+          ", Quantity: " +
+          curOb.amount +
+          ", Cost: " +
+          curOb.cost +
+          "\n"
+      );
     }
-  
-    $('.send').click(function(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "gabrieldombach@gmail.com",
-            Password : 'gabe1972_google',
-            To :'gdombach009@gmail.com', //JSON.parse(localStorage.getItem('userEmail')),
-            From : "gabrieldombach@gmail.com",
-            Subject : "Your Recipt",
-            Body : $('.bought').html()
-            }).then(
-              message => alert(message)
-            );
-    });
+    text = text.concat(JSON.parse(localStorage.getItem("total")));
+    download("reciept.txt", text);
+  });
 });
+/*
+  $(".fun").attr(
+    "href",
+    '<a href = "mailto:' +
+      localStorage.getItem("userEmail") +
+      "?body=" +
+      $(items).html() +
+      '">Send Feedback</a>'
+  );
+}); 
+function sendEmail(){
+  Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "gabrieldombach@gmail.com",
+      Password : 'C5B0A8D8A597EC034EA7FB7F3A0A3875BA52',
+      To :'gdombach009@gmail.com', //JSON.parse(localStorage.getItem('userEmail')),
+      From : "gabrieldombach@gmail.com",
+      Subject : "Your Recipt",
+      Body : $('.bought').html()
+      }).then(
+        message => alert(message)
+      );
+      }
 
 
+function initDownload() {
+  let reciept = JSON.parse(localStorage.getItem("reciept"));
 
-
-  
+  let text = "";
+  for (let a = 0; a < reciept.length; a++) {
+    let curOb = JSON.parse(reciept[a]);
+    text = text.concat(
+      "Name: " +
+        curOb.name +
+        ", Quantity: " +
+        curOb.amount +
+        ", Cost: " +
+        curOb.cost +
+        "\n"
+    );
+  }
+  text = text.concat(JSON.parse(localStorage.getItem('total')))
+  download("reciept.txt", text);
+}*/
