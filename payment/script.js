@@ -1,6 +1,7 @@
 let total = 0
 let arr = []
-let link = 1
+let link = 0
+let  link1 = 0
 $(document).ready(function () {
 
   let reciept = JSON.parse(localStorage.getItem("reciept"))
@@ -21,43 +22,15 @@ $(document).ready(function () {
    
     //  total = num + i 
 
-    $("#items").append('<tr><td><p>Item:' + currObj.name + '<P></P>' + 'Cost:' + currObj.cost + '</p></td></tr>')
+    $("#items").append('<tr><td><p>Item:' + currObj.name +' '+ currObj.cost +  '</p></td></tr>')
   }
  for (let i = 0; i < arr.length; i++) {
       total += arr[i];
       console.log(arr)
     }
-  document.getElementById("total").innerHTML = "Total: $" + total
+  document.getElementById("total").innerHTML = "CHECKOUT  $" + total
   localStorage.setItem("total", JSON.stringify(total));
 
-   
-    
-
-  $("#showme").click(function () {
-    $(".address").show()
-    alert("Please enter your Address")
-   
-    $(this).css('background-color', 'gray');
-    $(this).css('color', 'white');
-    $(this).css('border', 'black');
-    $(this).css('padding', '10px');
-    $("#hideme").css('background-color', 'white');
-    $("#hideme").css('color', 'black');
-    $("#hideme").css('border', 'white');
-    $("#hideme").css('padding', '5px');
-  })
-
-  $("#hideme").click(function () {
-    $(".address").hide()
-    $(this).css('background-color', 'gray');
-    $(this).css('color', 'white');
-    $(this).css('border', 'black');
-    $(this).css('padding', '10px');
-    $("#showme").css('background-color', 'white');
-    $("#showme").css('color', 'black');
-    $("#showme").css('border', 'white');
-    $("#showme").css('padding', '5px');
-  })
 
   $("#card").click(function () {
 
