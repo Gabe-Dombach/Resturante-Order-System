@@ -3,10 +3,12 @@
   padding: 0px;
   box-sizing: border-box;
   color:white;
-  background-color: rgb(53, 51, 49)
+  background-color: rgb(53, 51, 49);
+  font-size:20px;
+  font-family: 'Open Sans', sans-serif;
 }
 html, body{
-  background-image: url("download.jpg")
+  background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
 }
 #main {
   display: flex;
@@ -20,15 +22,15 @@ html, body{
   margin-bottom: 75px;
 }
 #menu {
-  width: 55%;
-
+  width: fit-content;
+  margin-right: 50px;
   margin-top: 10%;
 }
 #order {
-  min-width: 25%;
   width: fit-content;
   margin-bottom: 10%;
   margin-top: 10%;
+  height:fit-content;
 }
 h1 {
   text-align: center;
@@ -37,6 +39,10 @@ h1 {
   color:black;
   font-size:75px;
 }
+#items{
+  margin-left:auto;
+  margin-right:auto;
+}
 #items td {
   padding-left: 35px;
   padding-right: 35px;
@@ -44,7 +50,8 @@ h1 {
   height:100px
 }
 #items tr{
-  height:100px
+  height:100px;
+  width:560px;
 }
 #food td {
   padding: 25px;
@@ -55,21 +62,24 @@ h1 {
   min-width:568px;
 }
 img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
 }
 #items{
   height: fit-content
 }
 #items td{
   width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
 }
 #checkout{
   height:fit-content;
-  margin-left: 242px;
-  margin-right: 242px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  padding:10px;
+  margin-left:240px;
+  margin-right:240px;
+  margin-bottom:50px;
+  margin-top:50px;
 }
 .title{
   text-align:center;
