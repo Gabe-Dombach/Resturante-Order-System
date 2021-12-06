@@ -10,6 +10,8 @@ header {
 }
 body {
   background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
+  height: 200vh;
+
 }
 #signupBox {
   margin: auto;
