@@ -173,7 +173,7 @@ $(document).ready(function () {
     arr1 =JSON.parse(localStorage.getItem("menue"))
     arr1.push(JSON.stringify(newItem)); //add new item to array and store in local storage
     localStorage.setItem("menue", JSON.stringify(arr1));
-    location.reload(true);
+    location.reload();
   });
   $("li").click(function () {
     console.log("remove func runing");
@@ -188,7 +188,7 @@ $(document).ready(function () {
         removeList.splice(x, 1);
          localStorage.setItem('menue',JSON.stringify(removeList));
         console.log("removed");
-        location.reload(true);
+        location.reload();
 
       }
     }
