@@ -5,10 +5,11 @@ $(document).ready(function () //adds items to the menu on page load
   list = JSON.parse(localStorage.getItem("menue"));
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
+    console.log(list[i])
     let foodId = list[i].idName;
-    foodId = foodId.join("");
-    let food = list[i].name;
+    console.log(foodId)
     let imageData = list[i].image;
+    let food = list[i].name
     let price = list[i].price; //lines 3-13 parse out the jsons array and then parse out items from the array
     $("#food").append(
       "<tr><td id=" +
@@ -20,7 +21,7 @@ $(document).ready(function () //adds items to the menu on page load
         food +
         "</div></td><td><div id=" +
         foodId +
-        "1>" +
+        "1>$" +
         price +
         '</div></td><td><button onclick="addItem(this)" id=' +
         foodId +
@@ -34,7 +35,6 @@ function addItem(a) {
   let item = a.id;
   let value = "#" + item + 1;
   let image = "#" + item + 0;
-  let imageContent = $(image).html();
   let valueContent = $(value).html();
   let checker = $("#1" + item).html();
   var count = $(a).data("count") || 0; //lines 35-41 grab all the data fron the item you wish to add and formats them for the new element
