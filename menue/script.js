@@ -105,9 +105,11 @@ function checkout() //this is creates the json array and puts it into local stor
   let arr1 = []
   var table = document.getElementById("items");
   for (let i = 0, row; row = table.rows[i]; i++) {
+    console.log("is this running")
     let itemName = ""
     let total = ""
     let quantity = ""
+  
     for (let j = 0, col; col = row.cells[j]; j++) {
       if(j == 0)
       {
@@ -149,7 +151,9 @@ function checkout() //this is creates the json array and puts it into local stor
         {
           temp.pop()
         }
+        quantity = temp.join("")
       }
+    }
       const newItem = {
         name: itemName,
         cost: total,
@@ -158,9 +162,10 @@ function checkout() //this is creates the json array and puts it into local stor
       arr1.push(JSON.stringify(newItem));
       localStorage.setItem("reciept", JSON.stringify(arr1));
     }
-    window.location.href = "../payment/payment.html";
+    console.log(localStorage.getItem("reciept"))
+    // window.location.href = "../payment/payment.html";
   }
-}}
+}
 
 function removeItem(a) {
   // removes the item attached to the button from the cart
