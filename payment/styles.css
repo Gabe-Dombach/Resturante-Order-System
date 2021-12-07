@@ -28,6 +28,7 @@
   margin-top: 50px;
   height: 40px;
   color: white;
+  margin-bottom: 20px;
 }
 
 
@@ -252,7 +253,7 @@ margin-top: 20px;
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: rgb(18, 93, 231);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -272,17 +273,19 @@ margin-top: 20px;
   opacity: 1;}
 
   #total{
-    color:white;
+    color:black;
     font-size: xx-large;
     text-decoration: none;
-   
-   background-color: black;
+   background-color: white;
+   border: 1px solid white;
+
    
   }
   #total:hover{
-    color: blue;
+    color: red;
     background-color:  white;
     border: 2px solid purple;
+   
    
   }
 table{
@@ -300,4 +303,15 @@ width: 500px;
   table td p{
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  #tip{
+    width: 70px;
+    border-radius: 10px;
+    background-color: white;
+    border: wheat;
+  font-size: 15px;
+  }
+  #tip:hover{
+    cursor: pointer;
+
   }
