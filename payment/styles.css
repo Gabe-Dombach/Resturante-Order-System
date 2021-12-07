@@ -9,7 +9,7 @@
         background-image:url("eggs.jpeg") ;
     background-position:left;
     background-repeat: no-repeat;
-    background-size:1200px;
+    background-size:1300px;
     position: relative;
     height: fit-content;
     }
@@ -21,36 +21,34 @@
     justify-content: center;
 
 }
+/* Heading*/
 .tablehead {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
   height: 40px;
+  color: white;
 }
 
 
 .content{
-    border: 1px solid white;
+ background-color: black;
     height: 550px;
     overflow-y: auto;
+    width: 500px;
 }
 
 article{
-
-    border: 1px solid black;
-    width: 700px;
+ 
+    width: 500px;
    background-color: black;
    min-height: 100vh;
   float: right;
   color: white;
 }
-
-a{
-
+/*Buttons with left to right animation*/
+.a1{
     margin-top: 10px;
-
-
-
     display: block;
     width: 200px;
     height: 40px;
@@ -68,14 +66,15 @@ a{
     margin-right: 25px;
     padding:20px;
     color: white;
+
   }
   
-  a span{
+  .a1 span{
     position: relative;
     z-index: 2;
   }
   
-  a:after{
+  .a1:after{
     position: absolute;
     content: "";
     top: 0;
@@ -87,26 +86,17 @@ a{
     color: black;
   }
  
-  a:hover:after{
+  .a1:hover:after{
     width: 100%;
   }
-  .remove{
-      border-radius: 10px;
-      padding: 5px;
-      background-color: white;
-      color: orange;
-      border: 1px solid white;
-  }
-  .remove:hover{
-      color: black;
-      background-color: orange;
-      border: 1px solid black;
-  }
+ 
+ 
   .choose{
       display: flex;
       font-size: x-large;
       margin-top: 25px;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    color: black;
     
      
   }
@@ -119,6 +109,9 @@ a{
      margin-top: 15px;
      padding: 5px;
    display: none;
+
+
+
 
   }
   input{
@@ -134,15 +127,26 @@ a{
 }
 
 
-.hvr-ripple-out {
+.method {
   text-align: center;
-  width: 105px;
-  background-color: white;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 2 5 2px white;
-  position: relative;
+  width: 200px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  font-size: x-large;
+  border: 2px solid white;
 }
+.method:hover{
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+#dev:hover{
+color: red;
+background-color: white;
+cursor: pointer;
+}
+
 
 
 .f {
@@ -157,12 +161,143 @@ a{
 }
 
 
-
+/* Table content*/
 #items{
   color: white;
   font-size: 50px;
  
 }
- 
 
 
+/*Resturant Name */
+#name{
+display: flex;
+justify-content: center;
+font-size: 40px;
+}
+
+/* List of scrollable text styling*/
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  font-size: 40px;
+margin-left: 180px;
+margin-top: 20px;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;
+  font-weight: bold;
+  
+}
+/*Adds Sliding animation*/
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
+
+.open-button{
+  text-align: center;
+  width: 200px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  font-size: x-large;
+  border: 2px solid white;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 250px;
+  left: 650px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;}
+
+  #total{
+    color:white;
+    font-size: xx-large;
+    text-decoration: none;
+   
+   background-color: black;
+   
+  }
+  #total:hover{
+    color: blue;
+    background-color:  white;
+    border: 2px solid purple;
+   
+  }
+table{
+  width: 500px;
+}
+  table td{
+ border-bottom: 2px solid white;
+ border-top: 2px solid white;
+width: 500px;
+  }
+  table tr{
+    width: auto;
+  }
+  
+  table td p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
