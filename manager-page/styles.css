@@ -113,9 +113,13 @@ li {
 } */
 .menu-box {
   margin-left: 20%;
+  width:fit-content;
+  height:fit-content;
   margin-right: 20%;
 }
 .menu-items {
   background-color: rgb(153, 218, 207);
+  width:fit-content;
+  height:fit-content;
   border-style: solid;
 }
