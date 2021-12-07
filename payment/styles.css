@@ -136,6 +136,16 @@ article{
   font-size: x-large;
   border: 2px solid white;
 }
+.method:hover{
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+#dev:hover{
+color: red;
+background-color: white;
+cursor: pointer;
+}
 
 
 
@@ -173,7 +183,7 @@ font-size: 40px;
   position: relative;
   overflow: hidden;
   font-size: 40px;
-margin-left: 200px;
+margin-left: 180px;
 margin-top: 20px;
 }
 .scroller > span {
@@ -262,11 +272,12 @@ margin-top: 20px;
   opacity: 1;}
 
   #total{
-    color:black;
+    color:white;
     font-size: xx-large;
     text-decoration: none;
-    border: 2px solid silver;
-   background-color: silver;
+   
+   background-color: black;
+   
   }
   #total:hover{
     color: blue;
