@@ -162,8 +162,7 @@ function checkout() //this is creates the json array and puts it into local stor
       arr1.push(JSON.stringify(newItem));
       localStorage.setItem("reciept", JSON.stringify(arr1));
     }
-    console.log(localStorage.getItem("reciept"))
-    // window.location.href = "../payment/payment.html";
+    window.location.href = "../payment/payment.html";
   }
 }
 
