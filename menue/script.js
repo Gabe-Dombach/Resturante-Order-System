@@ -5,9 +5,7 @@ $(document).ready(function () //adds items to the menu on page load
   list = JSON.parse(localStorage.getItem("menue"));
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
-    console.log(list[i])
     let foodId = list[i].idName;
-    console.log(foodId)
     let imageData = list[i].image;
     let food = list[i].name
     let price = list[i].price; //lines 3-13 parse out the jsons array and then parse out items from the array
