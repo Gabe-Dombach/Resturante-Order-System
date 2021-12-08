@@ -11,13 +11,14 @@ $(document).ready(function () //adds items to the menu on page load
     let imageData = list[i].image;
     let food = list[i].name
     let price = list[i].price; //lines 3-13 parse out the jsons array and then parse out items from the array
+    let describe = list[i].description
     $("#food").append(
       "<tr><td id=" +
         foodId +
         "0>" +
         "<div class='toolTip'><img src=" +
         imageData +
-        '><span class="toolTipText">placeholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholder</span></div></td><td><div>' +
+        '><span class="toolTipText">' + describe + '</span></div></td><td><div>' +
         food +
         "</div></td><td><div id=" +
         foodId +
