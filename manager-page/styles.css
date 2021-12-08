@@ -19,16 +19,15 @@ img {
   opacity: 0.8;
 }
 
-dt:hover {
-  background-image: url("img/cross.png");
+li:hover {
+  background-image: url("img/cross.jpg");
   background-position: center center;
 }
-
-dt:hover img {
+li:hover img {
   position: relative;
   z-index: -2;
 }
-dt:hover p {
+li:hover p {
   position: relative;
   z-index: -2;
 }
@@ -36,14 +35,14 @@ dt:hover p {
 h1 {
   text-align: center;
 }
-dl {
+ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
   list-style: none;
 }
-dt {
+li {
   display: flex;
   flex-direction: column;
   margin: 2vh;
@@ -51,11 +50,6 @@ dt {
   height: auto;
   align-content: center;
   justify-content: center;
-}
-button {
-  font-size:12px;
-  padding: 10px 10px;
-  border-radius: 5px;
 }
 .addSys {
   height: 30vh;
