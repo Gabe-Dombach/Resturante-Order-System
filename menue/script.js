@@ -15,9 +15,9 @@ $(document).ready(function () //adds items to the menu on page load
       "<tr><td id=" +
         foodId +
         "0>" +
-        "<img src=" +
+        "<div class='toolTip'><img src=" +
         imageData +
-        "></td><td><div>" +
+        '><span class="toolTipText">placeholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholderplaceholder</span></div></td><td><div>' +
         food +
         "</div></td><td><div id=" +
         foodId +
