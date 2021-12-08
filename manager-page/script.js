@@ -1,14 +1,11 @@
-// fetch("Resources/menue.json")
-//   .then(response => response.json())
-//   .then(json => console.log(json));
-
 let uploaded_image = "";
+
 let arr1 = [];
 function buildMenue() {
-  $.getJSON('Resources/menue.json', function(data){
-    arr1 = data
-    console.log(arr1)
-    localStorage.setItem("menue", arr1);
+  $.getJSON("Resources/menue.json", function (data) {
+    console.log(data);
+    localStorage.setItem("menue", JSON.stringify(data));
+    arr1 = JSON.parse(JSON.stringify(data));
     for (let x = 0; x < arr1.length; x++) {
       const iter = JSON.parse(arr1[x]);
       $(".menue").append(
@@ -23,9 +20,7 @@ function buildMenue() {
           "</p>"
       );
     }
-
   });
-  
 }
 function removeSpaces(x) {
   x = x.split("");
@@ -39,12 +34,10 @@ function removeSpaces(x) {
   return x;
 }
 $(document).ready(function () {
-
-console.log();
   if (localStorage.getItem("menue") == null) {
     buildMenue();
   } else {
-    let addedITems = JSON.parse(localStorage.getItem("menue")); //automaticly pull any added items from localStorage  and add them to the manager page
+    let addedITems=JSON.parse(localStorage.getItem("menue"));
     let newAddedItems = [];
     for (let x = 0; x < addedITems.length; x++) {
       newAddedItems.push(JSON.parse(addedITems[x]));
