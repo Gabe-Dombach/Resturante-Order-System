@@ -27,6 +27,13 @@ $(document).ready(function () {
         obj.cost +
         "</p></td></tr>"
     );
+
+  for (let i = 0; i < reciept.length; i++) {
+    let Obj = JSON.parse(reciept[i]);
+
+    $("#items").append('<tr><td><p>Item:' + Obj.name + '<P></P>'+'Cost:' + Obj.cost + '</p></td></tr>')
+    console.log(total)
+
   }
   $("#send").click(function () {
     // Start file download
