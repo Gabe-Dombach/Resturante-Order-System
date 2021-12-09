@@ -3,6 +3,7 @@ let uploaded_image = "";
 let arr1 = [];
 function buildMenue() {
   $.getJSON("Resources/menue.json", function (data) {
+    //pull the core menue out of the JSON file to build it if their isnt a menue in loal storage already
     console.log(data);
     localStorage.setItem("menue", JSON.stringify(data));
     arr1 = JSON.parse(JSON.stringify(data));
@@ -21,6 +22,7 @@ function buildMenue() {
       );
     }
   });
+  location.reload();
 }
 function removeSpaces(x) {
   x = x.split("");
@@ -37,7 +39,7 @@ $(document).ready(function () {
   if (localStorage.getItem("menue") == null) {
     buildMenue();
   } else {
-    let addedITems=JSON.parse(localStorage.getItem("menue"));
+    let addedITems = JSON.parse(localStorage.getItem("menue"));
     let newAddedItems = [];
     for (let x = 0; x < addedITems.length; x++) {
       newAddedItems.push(JSON.parse(addedITems[x]));

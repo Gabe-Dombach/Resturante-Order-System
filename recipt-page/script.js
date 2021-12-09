@@ -32,7 +32,7 @@ $(document).ready(function () {
     // Start file download
     let reciept = JSON.parse(localStorage.getItem("reciept"));
 
-    let text = "";
+    let text = "User:" + localStorage.getItem("currentUser")+'\n';
     for (let a = 0; a < reciept.length; a++) {
       let curOb = JSON.parse(reciept[a]);
       text = text.concat(
