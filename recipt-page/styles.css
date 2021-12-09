@@ -70,9 +70,10 @@ h1 {
 }
 
 .thanks {
-  width: 50%;
+  width: 30%;
   height: 10%;
   background-color: white;
   margin-left: 10%;
   padding: 35px;
+  font-size: 25px;
 }
