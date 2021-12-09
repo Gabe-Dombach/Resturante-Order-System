@@ -5,88 +5,89 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
+
     <script src="../menue/script.js"></script>
     <script src="script.js"></script>
-    
+
   </head>
 
   <body>
-
-
-    <div class="bg-image">
+<div class="background">
+    <canvas id="myCanvas" > </canvas>
       <article>
         <h1 id='Name'>Resturant de le Stevens</h1>
         <div class="scroller">
           <span>
-            Lovin it<br/>
-            5 stars <br/>
-            Affordable<br/>
+            Lovin it<br />
+            5 stars <br />
+            Affordable<br />
             Amazing
           </span>
         </div>
 
 
-        <div class="tablehead">
-         <a href="../recipt-page/reciept.html" id='total'>
-        </a>
-        <button  id="tip">Add Tip</button>
-        </div>
+
 
 
         <div class="content">
           <table id=items>
           </table>
         </div>
-      
 
+        <div class="tablehead">
+          <a href="../recipt-page/reciept.html" id='total'>
+          </a>
+          <button id="tip">Add Tip</button>
+        </div>
         <div class="btn">
           <a href="#" id="card" class="a1">Card</a>
           <a href="#" id="cash" class="a1">Cash</a>
-          <a class='a1'href="../menue/menue.html">Return</a>
+          <a class='a1' href="../menue/menue.html">Return</a>
         </div>
 
         <div class="choose">
           <button class="method" id="pick">Pick Up</button>
-         
-    <button class="open-button" id='dev'onclick="openForm()">Deliver</button>
 
-<div class="form-popup" id="myForm">
-  <form  class="form-container">
-    <h1>Address</h1>
+          <button class="open-button" id='dev' onclick="openForm()">Deliver</button>
 
-    <label for="street"><b>Street</b></label>
-    <input type="text" placeholder="Street Name" name="street" required>
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <h1>Address</h1>
 
-    <label for="psw"><b>Zip Code</b></label>
-    <input type="text" placeholder="Zip Code" name="psw" required>
+              <label for="street"><b>Street</b></label>
+              <input type="text" placeholder="Street Name" name="street" required>
 
-    <label for="location"><b>City</b></label>
-    <input type="text" placeholder="City" name="city" required>
-    
-    <button  class="btn">Done</button>
-    <button type=""class="btn cancel" onclick="closeForm()">Close</button>
-    
-  </form>
-  
-</div>
+              <label for="psw"><b>Zip Code</b></label>
+              <input type="text" placeholder="Zip Code" name="psw" required>
+
+              <label for="location"><b>City</b></label>
+              <input type="text" placeholder="City" name="city" required>
+
+              <button class="btn">Done</button>
+              <button type="" class="btn cancel" onclick="closeForm()">Close</button>
+
+            </form>
+
+          </div>
 
         </div>
       </article>
     </div>
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-  
-}
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
 
 
 
-</script>
+    </script>
   </body>
 </hmtl>

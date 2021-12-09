@@ -37,18 +37,20 @@ button {
   overflow-y: auto;
 }
 
-.itemsBox {
-  display: flex;
-  background-color: white;
-  width: 93%;
-  height: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
-  justify-content: center;
-  overflow-y: auto;
-}
+
+
+.itemsBox{
+    display: flex;
+    background-color: white;
+    width: 93%;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: center;
+    overflow-y: auto;
+
 
 h1 {
   border-bottom: 5px solid black;

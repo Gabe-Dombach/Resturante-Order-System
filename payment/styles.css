@@ -4,14 +4,19 @@
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
 }
+
+.bakcground{
+  display: flex;
+  justify-content: space-between;
+}
 /*Background Image*/
-.bg-image {
-        background-image:url("eggs.jpeg") ;
-    background-position:left;
-    background-repeat: no-repeat;
-    background-size:1300px;
-    position: relative;
-    height: fit-content;
+#myCanvas {
+  left: 0;
+     border: 1px solid black;
+     
+     
+     
+     z-index: -1;
     }
    
 
@@ -25,24 +30,26 @@
 .tablehead {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 40px;
-  color: white;
-  margin-bottom: 20px;
+  color: #5B84B1FF;
+  margin-bottom: 10px;
 }
 
 
 .content{
- background-color: black;
+ background-color: linear-gradient(rgb(66, 135, 245), white);
     height: 550px;
     overflow-y: auto;
     width: 500px;
+    margin-top: 20px;
+   
 }
 
 article{
- 
+  right: 0;
     width: 500px;
-   background-color: black;
+   background-color:  rgb(66, 135, 245);
    min-height: 100vh;
   float: right;
   color: white;
@@ -97,7 +104,7 @@ article{
       font-size: x-large;
       margin-top: 25px;
     justify-content: space-evenly;
-    color: black;
+    color: #5B84B1FF;
     
      
   }
@@ -131,19 +138,19 @@ article{
 .method {
   text-align: center;
   width: 200px;
-  background-color: black;
+  background-color: #5B84B1FF;
   color: white;
   border-radius: 40px;
   font-size: x-large;
   border: 2px solid white;
 }
 .method:hover{
-  color: red;
+  color: black;
   background-color: white;
   cursor: pointer;
 }
 #dev:hover{
-color: red;
+color: black;
 background-color: white;
 cursor: pointer;
 }
@@ -154,7 +161,6 @@ cursor: pointer;
  position: fixed;
   top: 5px;
   right: 10px;
- 
   color: #f0544f;
 }
 .f a {
@@ -213,7 +219,7 @@ margin-top: 20px;
 .open-button{
   text-align: center;
   width: 200px;
-  background-color: black;
+  background-color: #5B84B1FF;
   color: white;
   border-radius: 40px;
   font-size: x-large;
@@ -273,7 +279,7 @@ margin-top: 20px;
   opacity: 1;}
 
   #total{
-    color:black;
+    color:#5B84B1FF;
     font-size: xx-large;
     text-decoration: none;
    background-color: white;
@@ -308,10 +314,10 @@ width: 500px;
     width: 70px;
     border-radius: 10px;
     background-color: white;
-    border: wheat;
+    border: 2px solid black;
   font-size: 15px;
   }
   #tip:hover{
     cursor: pointer;
-    color: blue;
+    color: #5B84B1FF;
   }
