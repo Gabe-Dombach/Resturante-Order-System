@@ -1,25 +1,27 @@
 let list = [];
 $(document).ready(function () //adds items to the menu on page load
 {
-  console.log(localStorage.getItem("menue"))
+  console.log(localStorage.getItem("menue"));
   list = JSON.parse(localStorage.getItem("menue"));
-  console.log(list)
+  console.log(list);
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
-    console.log(list)
-    console.log("is this working")
+    console.log(list);
+    console.log("is this working");
     let foodId = list[i].idName;
     let imageData = list[i].image;
-    let food = list[i].name
+    let food = list[i].name;
     let price = list[i].price; //lines 3-13 parse out the json array and then parse out items from the array
-    let describe = list[i].description
+    let describe = list[i].description;
     $("#food").append(
       "<tr><td id=" +
         foodId +
         "0>" +
         "<div class='toolTip'><img src=" +
         imageData +
-        '><span class="toolTipText">' + describe + '</span></div></td><td><div>' +
+        '><span class="toolTipText">' +
+        describe +
+        "</span></div></td><td><div>" +
         food +
         "</div></td><td><div id=" +
         foodId +
@@ -100,62 +102,51 @@ function addItem(a) {
   }
 }
 
-function checkout() //this is creates the json array and puts it into local storage
-{
-  if($("#items").text() != undefined)//the if statement ensures that the function only operatesif there is something in the order to avoid potential errors and because you can't pay for nothing
-  {
-  let arr1 = []
-  var table = document.getElementById("items");
-  for (let i = 0, row; row = table.rows[i]; i++) {
-    console.log("is this running")
-    let itemName = ""
-    let total = ""
-    let quantity = ""
-  
-    for (let j = 0, col; col = row.cells[j]; j++) {
-      if(j == 0)
-      {
-        let temp = col.innerHTML
-        temp = temp.split("")
-        for(let d = 0; d < 5; d++)
-        {
-          temp.shift()
+function checkout() {
+  //this is creates the json array and puts it into local storage
+  if ($("#items").text() != undefined) {
+    //the if statement ensures that the function only operatesif there is something in the order to avoid potential errors and because you can't pay for nothing
+    let arr1 = [];
+    var table = document.getElementById("items");
+    for (let i = 0, row; (row = table.rows[i]); i++) {
+      console.log("is this running");
+      let itemName = "";
+      let total = "";
+      let quantity = "";
+
+      for (let j = 0, col; (col = row.cells[j]); j++) {
+        if (j == 0) {
+          let temp = col.innerHTML;
+          temp = temp.split("");
+          for (let d = 0; d < 5; d++) {
+            temp.shift();
+          }
+          for (let d = 0; d < 6; d++) {
+            temp.pop();
+          }
+          itemName = temp.join("");
+        } else if (j == 1) {
+          let temp = col.innerHTML;
+          temp = temp.split("");
+          for (let d = 0; d < 5; d++) {
+            temp.shift();
+          }
+          for (let d = 0; d < 6; d++) {
+            temp.pop();
+          }
+          total = temp.join("");
+        } else if (j == 2) {
+          let temp = col.innerHTML;
+          temp = temp.split("");
+          for (let d = 0; d < 5; d++) {
+            temp.shift();
+          }
+          for (let d = 0; d < 6; d++) {
+            temp.pop();
+          }
+          quantity = temp.join("");
         }
-        for(let d = 0; d < 6; d++)
-        {
-          temp.pop()
-        }
-        itemName = temp.join("")
       }
-      else if(j == 1)
-      {
-        let temp = col.innerHTML
-        temp = temp.split("")
-        for(let d = 0; d < 5; d++)
-        {
-          temp.shift()
-        }
-        for(let d = 0; d < 6; d++)
-        {
-          temp.pop()
-        }
-        total = temp.join("")
-      }
-      else if(j == 2)
-      {
-        let temp = col.innerHTML
-        temp = temp.split("")
-        for(let d = 0; d < 5; d++)
-        {
-          temp.shift()
-        }
-        for(let d = 0; d < 6; d++)
-        {
-          temp.pop()
-        }
-        quantity = temp.join("")
-      }
-    }
       const newItem = {
         name: itemName,
         cost: total,
