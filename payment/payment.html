@@ -1,108 +1,91 @@
 <hmtl>
 
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="../menue/script.js"></script>
     <script src="script.js"></script>
+
   </head>
 
   <body>
-
-
-    <div class="bg-image">
+<div class="background">
+    <canvas id="myCanvas" > </canvas>
       <article>
-        <div class="tablehead">
-          <h1 id="total">Total:$</h1>
+        <h1 id='Name'>Resturant de le Stevens</h1>
+        <div class="scroller">
+          <span>
+            Lovin it<br />
+            5 stars <br />
+            Affordable<br />
+            Amazing
+          </span>
         </div>
+
+
+
+
+
         <div class="content">
           <table id=items>
-         
           </table>
         </div>
-        <div class="Project">
-          <img src="https://media.giphy.com/media/XGNafjOYE7g88/giphy.gif" alt="help" class="imgMasked" />
-          <div class="Project-hail"></div>
-          <div class="Project-hail2"></div>
-        </div>
 
+        <div class="tablehead">
+          <a href="../recipt-page/reciept.html" id='total'>
+          </a>
+          <button id="tip">Add Tip</button>
+        </div>
         <div class="btn">
-          <a href="#" id="card">Card</a>
-          <a href="#" id="cash">Cash</a>
-          <a href="../menue/menue.html">Return</a>
+          <a href="#" id="card" class="a1">Card</a>
+          <a href="#" id="cash" class="a1">Cash</a>
+          <a class='a1' href="../menue/menue.html">Return</a>
         </div>
 
         <div class="choose">
-          <button class="hvr-ripple-out" id="hideme">Pick Up</button>
-          <button class="hvr-ripple-out" id="showme">Deliver</button>
+          <button class="method" id="pick">Pick Up</button>
 
-          <a href="../recipt-page/reciept.html" id="purchase">Purchase</a>
-        </div>
+          <button class="open-button" id='dev' onclick="openForm()">Deliver</button>
 
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+              <h1>Address</h1>
 
-        <div class="address">
-          <h2>Enter delivery address:</h2>
-          <input class="box" type="text" placeholder="street">
-          <input class="box" type="text" placeholder="City">
-          <input class="box" type="text" placeholder="zip code">
-          <label id="home" for="location">State:</label>
-          <select name="dev" id="states">
-            <option values="plz1">Choose state</option>
-            <option>Alabama</option>
-            <option>Alaska</option>
-            <option>Arizona</option>
-            <option>Arkansas</option>
-            <option>California</option>
-            <option>Colorado</option>
-            <option>Connecticut</option>
-            <option>Delaware</option>
-            <option>Florida</option>
-            <option>Georgia</option>
-            <option>Hawaii</option>
-            <option>Idaho</option>
-            <option>Illinois</option>
-            <option>Indiana</option>
-            <option>Iowa</option>
-            <option>Kansas</option>
-            <option>Kentucky</option>
-            <option>Louisiana</option>
-            <option>Maine</option>
-            <option>Maryland</option>
-            <option>Massachusetts</option>
-            <option>Michigan</option>
-            <option>Minnesota</option>
-            <option>Mississippi</option>
-            <option>Missouri</option>
-            <option>Montana</option>
-            <option>Nebraska</option>
-            <option>Nevada</option>
-            <option>New Hampshire</option>
-            <option>New Jersey</option>
-            <option>New Mexico</option>
-            <option>New York</option>
-            <option>North Dakota</option>
-            <option>Ohio</option>
-            <option>Oklahoma</option>
-            <option>Oregon</option>
-            <option>Pennsylvania</option>
-            <option>Rhode Island</option>
-            <option>South Carolina</option>
-            <option>South Dakota</option>
-            <option>Tennessee</option>
-            <option>Texas</option>
-            <option>Utah</option>
-            <option>Vermont</option>
-            <option>Virginia</option>
-            <option>Washington</option>
-            <option>West Virginia</option>
-            <option>Wisconsin</option>
-            <option>Wyoming</option>
-            <option>Other</option>
+              <label for="street"><b>Street</b></label>
+              <input type="text" placeholder="Street Name" name="street" required>
+
+              <label for="psw"><b>Zip Code</b></label>
+              <input type="text" placeholder="Zip Code" name="psw" required>
+
+              <label for="location"><b>City</b></label>
+              <input type="text" placeholder="City" name="city" required>
+
+              <button class="btn">Done</button>
+              <button type="" class="btn cancel" onclick="closeForm()">Close</button>
+
+            </form>
+
+          </div>
 
         </div>
-
       </article>
     </div>
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
 
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
+
+
+    </script>
   </body>
 </hmtl>

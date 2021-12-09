@@ -1,40 +1,43 @@
-body{
-    background-color: gray;
-    margin: 50px;
-    background-image:url("https://www.washingtonian.com/wp-content/uploads/2021/07/2Fiftys-1500x1000.jpg");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position-x: 50px;
-    background-position-y: 195px;
+body {
+  background-color: gray;
+  margin: 50px;
+  background-image: url("https://www.washingtonian.com/wp-content/uploads/2021/07/2Fiftys-1500x1000.jpg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position-x: 50px;
+  background-position-y: 195px;
+  font-family: "Open Sans", sans-serif;
 }
 
-button{
-    font-size: 25px;
-    width: 99%;
-    height: 10%;
-    margin-top: 5%;
+button {
+  font-size: 25px;
+  width: 99%;
+  height: 10%;
+  margin-top: 5%;
 }
 
-.column{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.column p{
-    font-size: 25px;
+.column p {
+  font-size: 25px;
 }
-.contaner{
-    margin-top: 60px;
+.contaner {
+  margin-top: 60px;
 }
 
-.bought{
-    width: 40%;
-    height: fit-content;
-    padding: 15px;
-    background-color: red;
-    margin-left: 58%;
-
+.bought {
+  width: 40%;
+  height: fit-content;
+  padding: 15px;
+  background-color: red;
+  margin-left: 58%;
+  overflow-y: auto;
 }
+
+
 
 .itemsBox{
     display: flex;
@@ -47,16 +50,14 @@ button{
     padding-left: 15px;
     justify-content: center;
     overflow-y: auto;
+
+
+h1 {
+  border-bottom: 5px solid black;
 }
 
-h1{
-    border-bottom: 5px solid black;
-    
+.newTitle {
+  font-size: 60px;
+  border-bottom: 5px solid black;
+  justify-self: center;
 }
-
-.newTitle{
-    font-size: 60px;
-    border-bottom: 5px solid black;
-    justify-self: center;
-}
-

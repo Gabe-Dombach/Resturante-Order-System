@@ -2,16 +2,19 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color:white;
-  background-color: rgb(53, 51, 49)
+  color: white;
+  background-color: rgb(53, 51, 49);
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
 }
-html, body{
-  background-image: url("download.jpg")
+html,
+body {
+  background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
 }
 #main {
   display: flex;
   width: 90%;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   margin-left: 5%;
   margin-right: 5%;
   justify-content: space-around;
@@ -20,31 +23,36 @@ html, body{
   margin-bottom: 75px;
 }
 #menu {
-  width: 55%;
-
+  width: fit-content;
+  margin-right: 50px;
   margin-top: 10%;
 }
 #order {
-  min-width: 25%;
   width: fit-content;
   margin-bottom: 10%;
   margin-top: 10%;
+  height: fit-content;
 }
 h1 {
   text-align: center;
   padding-top: 100px;
-  background-color: rgba(0,0,0,0);
-  color:black;
-  font-size:75px;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-size: 75px;
+}
+#items {
+  margin-left: auto;
+  margin-right: auto;
 }
 #items td {
   padding-left: 35px;
   padding-right: 35px;
   padding: 25px;
-  height:100px
+  height: 100px;
 }
-#items tr{
-  height:100px
+#items tr {
+  height: 100px;
+  width: 560px;
 }
 #food td {
   padding: 25px;
@@ -52,44 +60,67 @@ h1 {
   padding-right: 75px;
 }
 #food tr {
-  min-width:568px;
+  min-width: 568px;
 }
 img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
 }
-#items{
-  height: fit-content
+#items {
+  height: fit-content;
 }
-#items td{
-  width:fit-content;
+#items td {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
-#checkout{
-  height:fit-content;
-  margin-left: 242px;
-  margin-right: 242px;
-  margin-top: 25px;
+#checkout {
+  height: fit-content;
+  padding: 10px;
+  margin-left: 240px;
+  margin-right: 240px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
   margin-bottom: 25px;
-}
-.title{
-  text-align:center;
-  margin-top:50px;
-  margin-bottom:25px;
   font-size: xx-large;
 }
-table, td
-{
+table,
+td {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
-table
-{
-  margin:10px
+table {
+  margin: 10px;
 }
-#log-out
-{
-  margin-left:30%;
-  padding:10px;
+#log-out {
+  margin-left: 30%;
+  padding: 10px;
   font-size: xx-large;
   margin-bottom: 75px;
+}
+
+.toolTip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.toolTip .toolTipText {
+  visibility: hidden;
+  width: fit-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.toolTip:hover .toolTipText {
+  visibility: visible;
 }

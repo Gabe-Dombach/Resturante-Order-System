@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 header {
   text-align: center;
   font-size: xx-large;
 }
 body {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(206, 123, 16);
+  background-image: linear-gradient(180deg, rgb(66, 135, 245), white);
+  height: 200vh;
 }
 #loginBox {
   margin: auto;
