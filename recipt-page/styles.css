@@ -1,11 +1,7 @@
 body {
   background-color: gray;
   margin: 50px;
-  background-image: url("https://www.washingtonian.com/wp-content/uploads/2021/07/2Fiftys-1500x1000.jpg");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position-x: 50px;
-  background-position-y: 195px;
+ 
   font-family: "Open Sans", sans-serif;
 }
 
@@ -16,10 +12,16 @@ button {
   margin-top: 5%;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .column {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 .column p {
   font-size: 25px;
@@ -37,8 +39,6 @@ button {
   overflow-y: auto;
 }
 
-
-
 .itemsBox{
     display: flex;
     background-color: white;
@@ -50,7 +50,14 @@ button {
     padding-left: 15px;
     justify-content: center;
     overflow-y: auto;
+}
 
+.list {
+  width: 60%;
+  height: fit-content;
+  background-color: white;
+  padding: 15px;
+}
 
 h1 {
   border-bottom: 5px solid black;
@@ -60,4 +67,12 @@ h1 {
   font-size: 60px;
   border-bottom: 5px solid black;
   justify-self: center;
+}
+
+.thanks {
+  width: 50%;
+  height: 10%;
+  background-color: white;
+  margin-left: 10%;
+  padding: 35px;
 }
