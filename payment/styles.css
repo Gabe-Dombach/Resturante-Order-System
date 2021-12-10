@@ -5,18 +5,16 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.bakcground{
-  display: flex;
-  justify-content: space-between;
-}
+
 /*Background Image*/
-#myCanvas {
-  left: 0;
-     border: 1px solid black;
-     
-     
-     
-     z-index: -1;
+
+.backImage {
+  background-image:url("eggs.jpeg") ;
+  background-position:left;
+  background-repeat: no-repeat;
+  background-size:1400px;
+  position: relative;
+  height: 100%;
     }
    
 
@@ -24,8 +22,8 @@
 .btn{
     display: flex;
     justify-content: center;
-
 }
+
 /* Heading*/
 .tablehead {
   display: flex;
