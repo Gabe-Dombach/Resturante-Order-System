@@ -20,7 +20,7 @@ img {
 }
 
 li:hover {
-  background-image: url("img/cross.jpg");
+  background-image: url("img/cross.png");
   background-position: center center;
 }
 li:hover img {
