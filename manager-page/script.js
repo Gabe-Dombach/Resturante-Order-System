@@ -99,4 +99,8 @@ $(document).ready(function () {
       }
     }
   });
+  $('.logout').click(function(){
+    localStorage.removeItem('currentUser');
+    location.replace('../Login/login.html')
+  })
 });
