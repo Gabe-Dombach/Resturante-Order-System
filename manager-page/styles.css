@@ -20,7 +20,7 @@ img {
 }
 
 li:hover {
-  background-image: url("img/cross.jpg");
+  background-image: url("img/cross.png");
   background-position: center center;
 }
 li:hover img {
@@ -59,6 +59,15 @@ li {
   border: 1px solid;
   padding: 5px;
   margin-top: 20px;
+}
+.logout {
+  text-decoration: none;
+  padding:2vh;
+  margin: 1vh;
+  border:1px solid white;
+  background-color: white;
+  border-style: inset;
+
 }
 .addSys input {
   height: 10%;

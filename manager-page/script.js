@@ -2,7 +2,7 @@ let uploaded_image = "";
 
 let arr1 = [];
 function buildMenue() {
-  $.getJSON("Resources/menue.json", function (data) {
+  $.getJSON("Resources/menue.json", function (data){
     //pull the core menue out of the JSON file to build it if their isnt a menue in loal storage already
     console.log(data);
     localStorage.setItem("menue", JSON.stringify(data));
@@ -99,4 +99,8 @@ $(document).ready(function () {
       }
     }
   });
+  $('.logout').click(function(){
+    localStorage.removeItem('currentUser');
+    location.replace('../Login/login.html')
+  })
 });
