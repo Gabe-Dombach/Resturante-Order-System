@@ -19,28 +19,29 @@ $(document).ready(function () {
   console.log(reciept);
   for (let i = 0; i < reciept.length; i++) {
     let obj = JSON.parse(reciept[i]);
-    $("#items").append(
-      "<tr><td><p>Item:" +
-        obj.name +
-        "<P></P>" +
-        "Cost:" +
-        obj.cost +
-        "</p></td></tr>"
-    );
-  }
+    $("#item").append("<tr><td><p>" + obj.name +"</p></td></tr>");
+
+    $("#cost").append('<tr><td><p>' + obj.cost + '</p></td></tr>');
+
+    $("#amount").append('<tr><td><p>' + obj.amount + '</p></td></tr>');
+  
+    }
+    
+
   $("#send").click(function () {
     // Start file download
     let reciept = JSON.parse(localStorage.getItem("reciept"));
 
-    let text = "";
+    let text = "User:" + localStorage.getItem("userEmail")+'\n';
+    
     for (let a = 0; a < reciept.length; a++) {
       let curOb = JSON.parse(reciept[a]);
       text = text.concat(
         "Name: " +
           curOb.name +
-          ", Quantity: " +
+          ",\nQuantity: " +
           curOb.amount +
-          ", Cost: " +
+          ",\nCost: " +
           curOb.cost +
           "\n"
       );
@@ -58,13 +59,13 @@ $(document).ready(function () {
       $(items).html() +
       '">Send Feedback</a>'
   );
-}); 
+
 function sendEmail(){
   Email.send({
       Host : "smtp.elasticemail.com",
       Username : "gabrieldombach@gmail.com",
       Password : 'C5B0A8D8A597EC034EA7FB7F3A0A3875BA52',
-      To :'gdombach009@gmail.com', //JSON.parse(localStorage.getItem('userEmail')),
+      To :'gdombach009@gmail.com', JSON.parse(localStorage.getItem('userEmail')),
       From : "gabrieldombach@gmail.com",
       Subject : "Your Recipt",
       Body : $('.bought').html()
