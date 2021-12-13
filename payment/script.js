@@ -60,6 +60,7 @@ $(document).ready(function () {
     $("#dev").css('color', 'white');
   })
   $("#dev").click(function () {
+    alert('Order will be delivered to your location')
     $(this).css('background-color', 'white');
     $(this).css('color', 'black');
     $("#pick").css('background-color', '#5B84B1FF')
