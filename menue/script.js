@@ -27,7 +27,7 @@ $(document).ready(function () //adds items to the menu on page load
         foodId +
         "1>$" +
         price +
-        '</div></td><td><button onclick="addItem(this)" id=' +
+        '</div></td><td><div><input type="number" name="quantity" min="1" max="10" value="1" id=' + foodId + '2></div></td><td><button onclick="addItem(this)" id=' +
         foodId +
         ">Add</button></td></tr>" //lines 14-28 build the element for menu items and appends it to the menu table
     );
@@ -39,12 +39,25 @@ function addItem(a) {
   let item = a.id;
   let value = "#" + item + 1;
   let image = "#" + item + 0;
+  let quantity = "#" + item + 2;
+  quantity = $(quantity).val();
+  quantity = Number(quantity)
   let valueContent = $(value).html();
+  console.log(valueContent)
   let checker = $("#1" + item).html();
   var count = $(a).data("count") || 0; //lines 35-41 grab all the data fron the item you wish to add and formats them for the new element
   if (count < 1) {
     //this if statement runs if the item is not on the order, as tracked by the "count" data attribute attached to each element
-    $(a).data("count", ++count);
+    valueContent = valueContent.split("");
+    valueContent.shift();
+    console.log(valueContent)
+    valueContent = valueContent.join("");
+    valueContent = Number(valueContent);
+    valueContent = valueContent * quantity;
+    valueContent = valueContent.toFixed(2);
+    valueContent = "$" + valueContent;
+    $(a).data("count", count + quantity);
+    count = $(a).data("count")
     $("#items").append(
       "<tr id=1" +
         item +
@@ -60,8 +73,8 @@ function addItem(a) {
     );
   } else if (count > 1 && checker == undefined) {
     //this if statement runs if the item has been previously added to the order table, but has since been removed, it just resets the "count" attribute
-    $(a).data("count", 1);
-    let count = 1;
+    $(a).data("count", quantity);
+    let count = quantity;
     $("#items").append(
       "<tr id=1" +
         item +
@@ -80,7 +93,8 @@ function addItem(a) {
     $("#1" + item).remove();
     valueContent = valueContent.split("");
     valueContent.shift();
-    $(a).data("count", ++count);
+    $(a).data("count", count + quantity);
+    count = $(a).data("count")
     valueContent = valueContent.join("");
     valueContent = Number(valueContent);
     valueContent = valueContent * count;
