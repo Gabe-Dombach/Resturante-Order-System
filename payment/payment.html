@@ -36,14 +36,17 @@
           <table id=items>
           </table>
         </div>
-
+ <a href="#" id='total'> </a>
         <div class="tablehead">
-          <a href="../recipt-page/reciept.html" id='total'>
-          </a>
+          <a href="../recipt-page/reciept.html" id='total1'> </a>
+          <button id="taxAmount"></button>
           <button id="tip">Add Tip</button>
+
+          
+         
         </div>
         <div class="btn">
-          <a href="#" id="card" class="a1">Card</a>
+          <a href="#" id="card"  class="a1">Card</a>
           <a href="#" id="cash" class="a1">Cash</a>
           <a class='a1' href="../menue/menue.html">Return</a>
         </div>
@@ -68,6 +71,26 @@
 
               <button class="btn">Done</button>
               <button type="" class="btn cancel" onclick="closeForm()">Close</button>
+
+            </form>
+
+          </div>
+
+          <div class="form-popup1" id="myForm">
+            <form class="form-container">
+              <h1>Card Info</h1>
+
+              <label for="cardNumber"><b>Card Number</b></label>
+              <input type="text" placeholder="xxxx xxxxxx xxxxx" name="street">
+
+              <label for="psw"><b>Expiration Date</b></label>
+              <input type="text" placeholder="month/year" name="psw" >
+
+              <label for="cvv"><b>CVV</b></label>
+              <input type="text" placeholder="xxx" name="city">
+
+              <button class="btn">Done</button>
+              <button type="" class="btn cancel">Close</button>
 
             </form>
 
