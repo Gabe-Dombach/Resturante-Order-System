@@ -37,7 +37,7 @@ $(document).ready(function () {
 
   //buttons 
   $("#card").click(function () {
-
+    $(".form-popup1").show()
     $(this).css('background-color', 'rgba(255, 255, 255)');
     $(this).css('color', 'black');
     $("#cash").css('background-color', 'rgb(66, 135, 245)')
@@ -60,11 +60,14 @@ $(document).ready(function () {
     $("#dev").css('color', 'white');
   })
   $("#dev").click(function () {
-    alert('Order will be delivered to your location')
     $(this).css('background-color', 'white');
     $(this).css('color', 'black');
     $("#pick").css('background-color', '#5B84B1FF')
     $("#pick").css('color', 'white');
+  })
+  $(".btn cancel").click(function (){
+    $(".form-popup1").hide()
+
   })
   $("#tip").click(function () {
     amount = prompt("Please provide tip amount");
@@ -77,8 +80,20 @@ $(document).ready(function () {
   console.log(tipAmount)
   let num2 = Number(tipAmount)
   let fullPrice = num2 + total
-  document.getElementById("total").innerHTML = "CHECKOUT  $" + fullPrice
+  document.getElementById("total").innerHTML = "Total  $" + fullPrice
+  let tax = total * 1.06
+  var rounded = Math.round((tax + Number.EPSILON) * 100) / 100;
+console.log(rounded);
+
+let tax3 =rounded-total
+let tax4 = Math.round((tax3 + Number.EPSILON) * 100) / 100;
+
+  document.getElementById('taxAmount').innerHTML = "Tax: " + tax4
+ let fullAmount = fullPrice + tax4
+  document.getElementById("total1").innerHTML = "Checkout: " + fullAmount
+  
   localStorage.setItem("totalAmount", JSON.stringify(fullPrice))
+
 
 
 
