@@ -29,8 +29,9 @@ $(document).ready(function () {
 
     // This will run the total and the tax
     let t= localStorage.getItem("total")
-    let tx= localStorage.getItem("tax")
-    let x= t*tx
+    let tx= localStorage.getItem("tax-Decimal")
+    let x= t*tx-t;
+    x=x.toFixed(2)
     let te=localStorage.getItem("userEmail")
     console.log(te)
     document.getElementById("tt").innerHTML="Hello "+ te + " your total is $" + t + " with $" + x +" as your tax. Thank you for buying." 
