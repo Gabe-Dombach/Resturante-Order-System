@@ -1,6 +1,8 @@
 let list = [];
 $(document).ready(function () //adds items to the menu on page load
 {
+  console.log("")
+  console.log($("#items").text())
   list = JSON.parse(localStorage.getItem("menue"));
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
@@ -136,11 +138,12 @@ function addItem(a) {
     }
   }
   $("#total").html("$" + total);
+
 }
 
 function checkout() {
   //this is creates the json array and puts it into local storage
-  if ($("#items").text() != undefined) {
+  if ($("#items").text() != "") {
     //the if statement ensures that the function only operatesif there is something in the order to avoid potential errors and because you can't pay for nothing
     let arr1 = [];
     var table = document.getElementById("items");
