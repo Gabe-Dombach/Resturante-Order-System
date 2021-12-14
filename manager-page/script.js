@@ -100,7 +100,7 @@ $(document).ready(function () {
     }
   });
   $('.applyTax').click(function(){
-    localStorage.setItem('tax-Decimal',$('.tax').val()/100)
+    localStorage.setItem('tax-Decimal',1+($('.tax').val()/100))
   })
   $('.logout').click(function(){
     localStorage.removeItem('currentUser');
