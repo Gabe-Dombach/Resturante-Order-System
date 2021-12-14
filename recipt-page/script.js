@@ -26,7 +26,6 @@ $(document).ready(function () {
     $("#amount").append('<tr><td><p>' + obj.amount + '</p></td></tr>');
   
     }
-    
 
   $("#send").click(function () {
     // Start file download
