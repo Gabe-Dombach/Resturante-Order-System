@@ -56,8 +56,8 @@ h1 {
 }
 #food td {
   padding: 25px;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 #food tr {
   min-width: 568px;
