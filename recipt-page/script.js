@@ -51,8 +51,7 @@ $(document).ready(function () {
 
     }
     else{
-      let taxRate=eval('1+'+localStorage.getItem("tax-Decimal"))
-      let afterTax = taxRate*JSON.parse(localStorage.getItem("total"));
+      let afterTax = eval(localStorage.getItem('tax-Decimal')*JSON.parse(localStorage.getItem("total")));
       afterTax = parseFloat(afterTax);
       afterTax = afterTax.toFixed(2);
       text = text.concat('Total: $' +afterTax );
