@@ -1,7 +1,6 @@
 body {
   background-color: gray;
   margin: 50px;
- 
   font-family: "Open Sans", sans-serif;
 }
 
@@ -26,6 +25,7 @@ button {
 .column p {
   font-size: 25px;
 }
+
 .contaner {
   margin-top: 60px;
 }
