@@ -1,8 +1,11 @@
 body {
-  background-color: gray;
+  background: linear-gradient(180deg, rgb(66, 135, 245), white);
   margin: 50px;
   font-family: "Open Sans", sans-serif;
+  height: 4000px;
+  overflow-y: hidden;
 }
+
 
 button {
   font-size: 25px;
