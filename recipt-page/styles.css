@@ -77,3 +77,10 @@ h1 {
   padding: 35px;
   font-size: 25px;
 }
+
+#tt{
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  font-size: 25px;
+}
