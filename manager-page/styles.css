@@ -62,7 +62,7 @@ li {
   text-align: center;
 }
 .addSys {
-  height: 30vh;
+  height: 60vh;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
@@ -134,7 +134,7 @@ li {
   margin: auto;
 } */
 .menu-box {
-  margin-left: 20%;aaaaaaaaaaaaaaaaaaaaaaaaaaa
+  margin-left: 20%;
   width: fit-content;
   height: fit-content;
   margin-right: 20%;
