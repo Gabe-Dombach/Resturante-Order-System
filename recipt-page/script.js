@@ -45,7 +45,11 @@ $(document).ready(function () {
           "\n"
       );
     }
-    text = text.concat('$' + 1.06*JSON.parse(localStorage.getItem("total")));
+    text = text.concat('Total: $' + JSON.parse(localStorage.getItem("total"))+'\n');
+    let afterTax = 1.06*JSON.parse(localStorage.getItem("total"));
+    afterTax = parseFloat(afterTax);
+    afterTax = afterTax.toFixed(2);
+    text = text.concat('Subtotal: $' +afterTax );
     download("reciept.txt", text);
   });
 });
