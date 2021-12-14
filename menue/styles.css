@@ -124,3 +124,13 @@ table {
 .toolTip:hover .toolTipText {
   visibility: visible;
 }
+
+h2{
+  text-align:center;
+  font-size:30px;
+}
+
+#total{
+  text-align:center;
+  font-size:30px;
+}

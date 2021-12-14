@@ -1,13 +1,9 @@
 let list = [];
 $(document).ready(function () //adds items to the menu on page load
 {
-  console.log(localStorage.getItem("menue"));
   list = JSON.parse(localStorage.getItem("menue"));
-  console.log(list);
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
-    console.log(list);
-    console.log("is this working");
     let foodId = list[i].idName;
     let imageData = list[i].image;
     let food = list[i].name;
@@ -43,14 +39,12 @@ function addItem(a) {
   quantity = $(quantity).val();
   quantity = Number(quantity)
   let valueContent = $(value).html();
-  console.log(valueContent)
   let checker = $("#1" + item).html();
   var count = $(a).data("count") || 0; //lines 35-41 grab all the data fron the item you wish to add and formats them for the new element
   if (count < 1) {
     //this if statement runs if the item is not on the order, as tracked by the "count" data attribute attached to each element
     valueContent = valueContent.split("");
     valueContent.shift();
-    console.log(valueContent)
     valueContent = valueContent.join("");
     valueContent = Number(valueContent);
     valueContent = valueContent * quantity;
@@ -114,6 +108,34 @@ function addItem(a) {
         ">Remove</button></td></tr>"
     );
   }
+  var table = document.getElementById("items");
+  let total = 0
+  for (let i = 0, row; (row = table.rows[i]); i++) {
+    for (let j = 0, col; (col = row.cells[j]); j++) {
+      if(j == 1){ 
+        let temp = col.innerHTML
+        temp = temp.split("")
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp = temp.join("")
+        temp = Number(temp)
+        total = total + temp
+        total = total.toFixed(2)
+        total = Number(total)
+      }
+    }
+  }
+  $("#total").html("$" + total);
 }
 
 function checkout() {
@@ -123,7 +145,6 @@ function checkout() {
     let arr1 = [];
     var table = document.getElementById("items");
     for (let i = 0, row; (row = table.rows[i]); i++) {
-      console.log("is this running");
       let itemName = "";
       let total = "";
       let quantity = "";
