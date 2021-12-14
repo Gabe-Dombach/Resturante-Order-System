@@ -1,3 +1,5 @@
+let total = 0
+
 function download(filename, text) {
   var element = document.createElement("a");
   element.setAttribute(
@@ -14,6 +16,7 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
+
 $(document).ready(function () {
   let reciept = JSON.parse(localStorage.getItem("reciept"));
   console.log(reciept);
@@ -25,7 +28,15 @@ $(document).ready(function () {
 
     $("#amount").append('<tr><td><p>' + obj.amount + '</p></td></tr>');
   
+    
     }
+
+    let t= localStorage.getItem("total")
+    let tax= t*.06
+    console.log(tax)
+    document.getElementById("tt").innerHTML= "Your total is $" + t + " with $" + tax +" as your tax." 
+  
+
 
   $("#send").click(function () {
     // Start file download
