@@ -136,7 +136,6 @@ function addItem(a) {
     }
   }
   $("#total").html("$" + total);
-
 }
 
 function checkout() {
@@ -204,4 +203,32 @@ function removeItem(a) {
   item.shift();
   item = item.join("");
   $("#1" + item).remove();
+  var table = document.getElementById("items");
+  let total = 0
+  for (let i = 0, row; (row = table.rows[i]); i++) {
+    for (let j = 0, col; (col = row.cells[j]); j++) {
+      if(j == 1){ 
+        let temp = col.innerHTML
+        temp = temp.split("")
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.shift()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp.pop()
+        temp = temp.join("")
+        temp = Number(temp)
+        total = total + temp
+        total = total.toFixed(2)
+        total = Number(total)
+      }
+    }
+  }
+  $("#total").html("$" + total);
 }
