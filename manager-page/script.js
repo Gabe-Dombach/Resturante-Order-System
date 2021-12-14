@@ -99,6 +99,9 @@ $(document).ready(function () {
       }
     }
   });
+  $('.applyTax').click(function(){
+    localStorage.setItem('tax-Decimal',$('.tax').val()/100)
+  })
   $('.logout').click(function(){
     localStorage.removeItem('currentUser');
     location.replace('../Login/login.html')

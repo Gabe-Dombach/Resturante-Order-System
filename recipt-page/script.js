@@ -45,11 +45,19 @@ $(document).ready(function () {
           "\n"
       );
     }
-    text = text.concat('Total: $' + JSON.parse(localStorage.getItem("total"))+'\n');
-    let afterTax = 1.06*JSON.parse(localStorage.getItem("total"));
-    afterTax = parseFloat(afterTax);
-    afterTax = afterTax.toFixed(2);
-    text = text.concat('Subtotal: $' +afterTax );
+    text = text.concat('subTotal: $' + JSON.parse(localStorage.getItem("total"))+'\n');
+    if(localStorage.getItem("tax-Decimal")==null){
+      text = text.concat('Total: $' + JSON.parse(localStorage.getItem("total"))+'\n');
+
+    }
+    else{
+      let taxRate=eval('1+'+localStorage.getItem("tax-Decimal"))
+      let afterTax = taxRate*JSON.parse(localStorage.getItem("total"));
+      afterTax = parseFloat(afterTax);
+      afterTax = afterTax.toFixed(2);
+      text = text.concat('Total: $' +afterTax );
+    }
+  
     download("reciept.txt", text);
   });
 });
