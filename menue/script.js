@@ -1,8 +1,6 @@
 let list = [];
 $(document).ready(function () //adds items to the menu on page load
 {
-  console.log("")
-  console.log($("#items").text())
   list = JSON.parse(localStorage.getItem("menue"));
   for (let i = 0; i < list.length; i++) {
     list[i] = JSON.parse(list[i]);
