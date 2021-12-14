@@ -45,7 +45,7 @@ $(document).ready(function () {
           "\n"
       );
     }
-    text = text.concat(JSON.parse(localStorage.getItem("total")));
+    text = text.concat('$' + 1.06*JSON.parse(localStorage.getItem("total")));
     download("reciept.txt", text);
   });
 });
