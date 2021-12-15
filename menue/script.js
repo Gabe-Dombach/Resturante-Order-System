@@ -67,7 +67,7 @@ function addItem(a) {
         item +
         '>Remove</button></td></tr>' //lines 45-57 construct the item in the order table
     );
-  } else if (count > 1 && checker == undefined) {
+  } else if (count >= 1 && checker == undefined) {
     //this if statement runs if the item has been previously added to the order table, but has since been removed, it just resets the "count" attribute
     $(a).data('count', quantity);
     let count = quantity;
