@@ -27,9 +27,9 @@ $(document).ready(function () {
     $("#amount").append("<tr><td><p>" + obj.amount + "</p></td></tr>");
   }
   if (
-    localStorage.getItem("tax-Decimal") == null ||
-    localStorage.getItem("tax-Decimal") == 0
+    localStorage.getItem("tax-Decimal") == null 
   ) {
+    console.log('working');
     let te = localStorage.getItem("userEmail");
     let t = localStorage.getItem("total");
     document.getElementById("tt").innerHTML =
@@ -45,6 +45,14 @@ $(document).ready(function () {
     x = x.toFixed(2);
     let te = localStorage.getItem("userEmail");
     console.log(te);
+    console.log('working2');
+    document.getElementById("tt").innerHTML =
+    "Hello " +
+    te +
+    " your total is $" +
+    t +
+    " with "+ x+" as your tax. Thank you for buying.";
+
   }
   // This will run the total and the tax
 
