@@ -20,7 +20,10 @@ img {
   width: 19vh;
   height: 19vh;
   margin: auto;
-  opacity: 0.8;
+  opacity:1;
+}
+img:hover {
+  opacity: 0.25;
 }
 
 li:hover {
@@ -38,7 +41,7 @@ li:hover p {
 
 h1 {
   text-align: center;
-  width:20%;
+  width: 5vw;
   margin: auto;
   background-color: inherit;
 }
@@ -48,7 +51,7 @@ ul {
   justify-content: space-between;
   align-content: space-between;
   list-style: none;
-  
+
   flex-basis: 25%;
 }
 li {
@@ -72,15 +75,13 @@ li {
 }
 .logout {
   text-decoration: none;
-  padding:2vh;
+  padding: 2vh;
   margin: 1vh;
-  border:1px solid white;
   background-color: white;
   border-style: inset;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   margin-left: 0;
-
 }
 .addSys input {
   height: 10%;

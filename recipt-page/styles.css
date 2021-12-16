@@ -1,7 +1,9 @@
 body {
-  background-color: gray;
+  background: linear-gradient(180deg, rgb(66, 135, 245), white);
   margin: 50px;
   font-family: "Open Sans", sans-serif;
+  height: 4000px;
+  overflow-y: hidden;
 }
 
 button {
@@ -39,17 +41,17 @@ button {
   overflow-y: auto;
 }
 
-.itemsBox{
-    display: flex;
-    background-color: white;
-    width: 93%;
-    height: fit-content;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-    justify-content: center;
-    overflow-y: auto;
+.itemsBox {
+  display: flex;
+  background-color: white;
+  width: 93%;
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  justify-content: center;
+  overflow-y: auto;
 }
 
 .list {
@@ -78,7 +80,7 @@ h1 {
   font-size: 25px;
 }
 
-#tt{
+#tt {
   width: 100%;
   height: 10%;
   background-color: white;

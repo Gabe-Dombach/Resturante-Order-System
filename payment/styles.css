@@ -5,23 +5,21 @@
  
 }
 
-
 /*Background Image*/
 
 .backImage {
-  background-image:url("eggs.jpeg") ;
-  background-position:left;
+  background-image: url('eggs.jpeg');
+  background-position: left;
   background-repeat: no-repeat;
-  background-size:1400px;
+  background-size: 1400px;
   position: relative;
   height: 100%;
-    }
-   
+}
 
 /* Box on left side */
-.btn{
-    display: flex;
-    justify-content: center;
+.btn {
+  display: flex;
+  justify-content: center;
 }
 
 /* Heading*/
@@ -30,132 +28,120 @@
   justify-content: space-around;
   margin-top: 20px;
   height: 40px;
-  color: #5B84B1FF;
+  color: #5b84b1ff;
   margin-bottom: 10px;
 }
 
-
-.content{
- background-color: linear-gradient(rgb(66, 135, 245), white);
-    height: 550px;
-    overflow-y: auto;
-    width: 500px;
-    margin-top: 20px;
-   
+.content {
+  background-color: linear-gradient(rgb(66, 135, 245), white);
+  height: 550px;
+  overflow-y: auto;
+  width: 500px;
+  margin-top: 20px;
 }
 
-article{
-    width: 500px;
-   background-color:  rgb(66, 135, 245);
-   min-height: 100vh;
+article {
+  right: 0;
+  width: 500px;
+  background-color: rgb(66, 135, 245);
+  min-height: 100vh;
   float: right;
   color: white;
 }
 /*Buttons with left to right animation*/
-.a1{
-    margin-top: 10px;
-    display: block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: rgb(5, 5, 5);
-   /* border: 3px solid white; */
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding:20px;
-    color: white;
-
-  }
-  
-  .a1 span{
-    position: relative;
-    z-index: 2;
-  }
-  
-  .a1:after{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.563);
-    transition: all .35s;
-    color: black;
-  }
- 
-  .a1:hover:after{
-    width: 100%;
-  }
- 
- 
-  .choose{
-      display: flex;
-      font-size: x-large;
-      margin-top: 25px;
-    justify-content: space-evenly;
-    color: #5B84B1FF;
-    
-     
-  }
-  .box{
-      text-align: center;
-      width: 125px;
-  }
-
-  .address{
-     margin-top: 15px;
-     padding: 5px;
-   display: none;
-
-
-
-
-  }
-  input{
-      padding: 5px;
-      border: 1px solid black;
-      border-radius: 5px;
-  }
-#home{
-    font-size: x-large;
-}
-.fit{
-    border: 2px solid white;
+.a1 {
+  margin-top: 10px;
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: rgb(5, 5, 5);
+  /* border: 3px solid white; */
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 20px;
+  color: white;
 }
 
+.a1 span {
+  position: relative;
+  z-index: 2;
+}
+
+.a1:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.563);
+  transition: all 0.35s;
+  color: black;
+}
+
+.a1:hover:after {
+  width: 100%;
+}
+
+.choose {
+  display: flex;
+  font-size: x-large;
+  margin-top: 25px;
+  justify-content: space-evenly;
+  color: #5b84b1ff;
+}
+.box {
+  text-align: center;
+  width: 125px;
+}
+
+.address {
+  margin-top: 15px;
+  padding: 5px;
+  display: none;
+}
+input {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#home {
+  font-size: x-large;
+}
+.fit {
+  border: 2px solid white;
+}
 
 .method {
   text-align: center;
   width: 200px;
-  background-color: #5B84B1FF;
+  background-color: #5b84b1ff;
   color: white;
   border-radius: 40px;
   font-size: x-large;
   border: 2px solid white;
 }
-.method:hover{
+.method:hover {
   color: black;
   background-color: white;
   cursor: pointer;
 }
-#dev:hover{
-color: black;
-background-color: white;
-cursor: pointer;
+#dev:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
 }
 
-
-
 .f {
- position: fixed;
+  position: fixed;
   top: 5px;
   right: 10px;
   color: #f0544f;
@@ -164,20 +150,17 @@ cursor: pointer;
   color: #000;
 }
 
-
 /* Table content*/
-#items{
+#items {
   color: white;
   font-size: 50px;
- 
 }
 
-
 /*Resturant Name */
-#name{
-display: flex;
-justify-content: center;
-font-size: 40px;
+#name {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
 
 /* List of scrollable text styling*/
@@ -187,15 +170,14 @@ font-size: 40px;
   position: relative;
   overflow: hidden;
   font-size: 40px;
-margin-left: 180px;
-margin-top: 20px;
+  margin-left: 180px;
+  margin-top: 20px;
 }
 .scroller > span {
   position: absolute;
   top: 0;
   animation: slide 5s infinite;
   font-weight: bold;
-  
 }
 /*Adds Sliding animation*/
 @keyframes slide {
@@ -213,10 +195,10 @@ margin-top: 20px;
   }
 }
 
-.open-button{
+.open-button {
   text-align: center;
   width: 200px;
-  background-color: #5B84B1FF;
+  background-color: #5b84b1ff;
   color: white;
   border-radius: 40px;
   font-size: x-large;
@@ -248,7 +230,8 @@ margin-top: 20px;
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=text] {
+.form-container input[type='text'],
+.form-container input[type='text'] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -257,7 +240,8 @@ margin-top: 20px;
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+.form-container input[type='text']:focus,
+.form-container input[type='text']:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -270,7 +254,7 @@ margin-top: 20px;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
@@ -280,63 +264,64 @@ margin-top: 20px;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;}
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
 
-  #total{
-    color: White;
-    font-size: xx-large;
-    text-decoration: none;
- 
-   
+#total {
+  color: White;
+  font-size: xx-large;
+  text-decoration: none;
+
   margin-left: 170px;
-  }
+}
 
-  #total1{
-    color:White;
-    font-size: xx-large;
-    text-decoration: none;
-   background-color: #5B84B1FF;
-   border: 1px solid white;
-  
-  }
-  #total1:hover{
-    color: black;
-    background-color:  lightblue;
-    border: 2px solid white;
-  }
-  
-table{
+#total1 {
+  color: White;
+  font-size: xx-large;
+  text-decoration: none;
+  background-color: #5b84b1ff;
+  border: 1px solid white;
+}
+#total1:hover {
+  color: black;
+  background-color: lightblue;
+  border: 2px solid white;
+}
+
+table {
   width: 500px;
 }
-  table td{
- border-bottom: 2px solid white;
- border-top: 2px solid white;
+table td {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  width: 500px;
+}
+table tr {
+  width: auto;
+}
 
-  }
- 
-  
-  table td p{
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  #tip{
-    width: 70px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid black;
+table td p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#tip {
+  width: 70px;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid black;
   font-size: 15px;
-  }
-  #tip:hover{
-    cursor: pointer;
-    color: white;
-    background-color: salmon;
-
-  }
-  #taxAmount{
-    width: 70px;
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid black;
+}
+#tip:hover {
+  cursor: pointer;
+  color: white;
+  background-color: salmon;
+}
+#taxAmount {
+  width: 70px;
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid black;
   font-size: 15px;
-  }
+}
