@@ -2,6 +2,9 @@ let uploaded_image = '';
 
 let arr1 = [];
 function buildMenue() {
+  if(localStorage.getItem('tax-Decimal')=='0' || localStorage.getItem('tax-Decimal')==null) {
+    localStorage.setItem('tax-Decimal',1);
+  }
   $.getJSON('Resources/menue.json', function (data) {
     //pull the core menue out of the JSON file to build it if their isnt a menue in loal storage already
     console.log(data);
