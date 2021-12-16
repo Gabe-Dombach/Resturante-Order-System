@@ -2,6 +2,9 @@ let uploaded_image = '';
 
 let arr1 = [];
 function buildMenue() {
+  if(localStorage.getItem('tax-Decimal')=='0' || localStorage.getItem('tax-Decimal')==null) {
+    localStorage.setItem('tax-Decimal',1);
+  }
   $.getJSON('Resources/menue.json', function (data) {
     //pull the core menue out of the JSON file to build it if their isnt a menue in loal storage already
     console.log(data);
@@ -69,6 +72,19 @@ $(document).ready(function () {
     reader.readAsDataURL(this.files[0]);
   });
   $('#upload').on('click', function () {
+    let exists = false
+    arr1 = JSON.parse(localStorage.getItem('menue'));
+    for(let u = 0; u <arr1.length; u++){
+      const checker = JSON.parse(arr1[u]);
+      if(checker.idName == $('.nameNew').val()){
+        alert('Item already exists on menue');
+       exists = true
+      }
+    }
+    if(exists==true){
+      
+    }
+    else{
     const newItem = {
       //create new object for new item
       image: uploaded_image,
@@ -81,7 +97,7 @@ $(document).ready(function () {
     arr1.push(JSON.stringify(newItem)); //add new item to array and store in local storage
     localStorage.setItem('menue', JSON.stringify(arr1));
     location.reload();
-  });
+  }});
   $('li').click(function () {
     console.log('remove func runing');
     let myClass = this.className;
