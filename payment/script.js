@@ -4,8 +4,10 @@ let link = 0;
 let link1 = 0;
 let amount = 0;
 $(document).ready(function () {
+  let taxDec = localStorage.getItem('tax-Decimal', 1 + $('.tax').val() / 100);
   let reciept = JSON.parse(localStorage.getItem('reciept'));
   console.log(reciept);
+  console.log(taxDec)
   /*for(let i = 0; i <= reciept.length; i++){
     if(){
  
@@ -77,7 +79,7 @@ $(document).ready(function () {
   let num2 = Number(tipAmount);
   let fullPrice = num2 + total;
   document.getElementById('total').innerHTML = 'Total  $' + fullPrice;
-  let tax = total * 1.06;
+  let tax = total * taxDec;
   var rounded = Math.round((tax + Number.EPSILON) * 100) / 100;
   console.log(rounded);
 
@@ -86,7 +88,8 @@ $(document).ready(function () {
 
   document.getElementById('taxAmount').innerHTML = 'Tax: ' + tax4;
   let fullAmount = fullPrice + tax4;
-  document.getElementById('total1').innerHTML = 'Checkout: ' + fullAmount;
+  let tax5 = Math.round((fullAmount + Number.EPSILON) * 100) / 100;
+  document.getElementById('total1').innerHTML = 'Checkout: ' + tax5;
 
   localStorage.setItem('totalAmount', JSON.stringify(fullPrice));
 });
