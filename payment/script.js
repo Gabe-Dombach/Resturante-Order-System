@@ -90,9 +90,11 @@ let tax4 = Math.round((tax3 + Number.EPSILON) * 100) / 100;
 
   document.getElementById('taxAmount').innerHTML = "Tax: " + tax4
  let fullAmount = fullPrice + tax4
+  fullAmount = Math.round((fullAmount + Number.EPSILON) * 100) / 100;
   document.getElementById("total1").innerHTML = "Checkout: " + fullAmount
   
   localStorage.setItem("totalAmount", JSON.stringify(fullPrice))
+  localStorage.setItem("taxedTotal", JSON.stringify(fullAmount))
 
 
 
